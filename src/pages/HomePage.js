@@ -1,7 +1,6 @@
 import React from 'react';
 
 const HomePage = (props) => {
-    console.log('homepage',props);
     return (
         <div >
             <h3>STUDYSNAMI</h3>
