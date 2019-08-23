@@ -7,19 +7,23 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const App = (props) => {
     console.log(props);
-    const route= props.route;
+    const route = props.route;
     return (
-        <Container className='test' fluid>
-            <Header />
-            <section className="core-content">
-            <Row className="no-gutters-sm">
-                <Col sm={12} md={8} className="core-content-center">
-            {renderRoutes(route.routes)}
-            </Col>
-            <Col sm={12} md={4} className="core-content-right">side bar in development </Col>
-            </Row>
-            </section>
-        </Container>
+        <React.Fragment>
+            <Container className='test' >
+                <Header />
+            </Container>
+            <Container fluid>
+                <section className="core-content">
+                    <Row className="no-gutters-sm">
+                        <Col sm={12} xl={8} className="core-content-center">
+                            {renderRoutes(route.routes)}
+                        </Col>
+                        <Col sm={12} xl={4} className="core-content-right">side bar in development </Col>
+                    </Row>
+                </section>
+            </Container>
+        </React.Fragment>
     );
 };
 

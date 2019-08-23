@@ -5,6 +5,310 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /* $nav-tabs-link-active-color:        colors('gray');*/
+.wvh-5 {
+  width: 5vh !important;
+}
+
+.wvh-10 {
+  width: 10vh !important;
+}
+
+.wvh-15 {
+  width: 15vh !important;
+}
+
+.wvh-20 {
+  width: 20vh !important;
+}
+
+.wvh-25 {
+  width: 25vh !important;
+}
+
+.wvh-30 {
+  width: 30vh !important;
+}
+
+.wvh-35 {
+  width: 35vh !important;
+}
+
+.wvh-40 {
+  width: 40vh !important;
+}
+
+.wvh-45 {
+  width: 45vh !important;
+}
+
+.wvh-50 {
+  width: 50vh !important;
+}
+
+.wvh-55 {
+  width: 55vh !important;
+}
+
+.wvh-60 {
+  width: 60vh !important;
+}
+
+.wvh-65 {
+  width: 65vh !important;
+}
+
+.wvh-70 {
+  width: 70vh !important;
+}
+
+.wvh-75 {
+  width: 75vh !important;
+}
+
+.wvh-80 {
+  width: 80vh !important;
+}
+
+.wvh-85 {
+  width: 85vh !important;
+}
+
+.wvh-90 {
+  width: 90vh !important;
+}
+
+.wvh-95 {
+  width: 95vh !important;
+}
+
+.hvh-5 {
+  height: 5vh !important;
+}
+
+.hvh-10 {
+  height: 10vh !important;
+}
+
+.hvh-15 {
+  height: 15vh !important;
+}
+
+.hvh-20 {
+  height: 20vh !important;
+}
+
+.hvh-25 {
+  height: 25vh !important;
+}
+
+.hvh-30 {
+  height: 30vh !important;
+}
+
+.hvh-35 {
+  height: 35vh !important;
+}
+
+.hvh-40 {
+  height: 40vh !important;
+}
+
+.hvh-45 {
+  height: 45vh !important;
+}
+
+.hvh-50 {
+  height: 50vh !important;
+}
+
+.hvh-55 {
+  height: 55vh !important;
+}
+
+.hvh-60 {
+  height: 60vh !important;
+}
+
+.hvh-65 {
+  height: 65vh !important;
+}
+
+.hvh-70 {
+  height: 70vh !important;
+}
+
+.hvh-75 {
+  height: 75vh !important;
+}
+
+.hvh-80 {
+  height: 80vh !important;
+}
+
+.hvh-85 {
+  height: 85vh !important;
+}
+
+.hvh-90 {
+  height: 90vh !important;
+}
+
+.hvh-95 {
+  height: 95vh !important;
+}
+
+.wvw-5 {
+  width: 5vw !important;
+}
+
+.wvw-10 {
+  width: 10vw !important;
+}
+
+.wvw-15 {
+  width: 15vw !important;
+}
+
+.wvw-20 {
+  width: 20vw !important;
+}
+
+.wvw-25 {
+  width: 25vw !important;
+}
+
+.wvw-30 {
+  width: 30vw !important;
+}
+
+.wvw-35 {
+  width: 35vw !important;
+}
+
+.wvw-40 {
+  width: 40vw !important;
+}
+
+.wvw-45 {
+  width: 45vw !important;
+}
+
+.wvw-50 {
+  width: 50vw !important;
+}
+
+.wvw-55 {
+  width: 55vw !important;
+}
+
+.wvw-60 {
+  width: 60vw !important;
+}
+
+.wvw-65 {
+  width: 65vw !important;
+}
+
+.wvw-70 {
+  width: 70vw !important;
+}
+
+.wvw-75 {
+  width: 75vw !important;
+}
+
+.wvw-80 {
+  width: 80vw !important;
+}
+
+.wvw-85 {
+  width: 85vw !important;
+}
+
+.wvw-90 {
+  width: 90vw !important;
+}
+
+.wvw-95 {
+  width: 95vw !important;
+}
+
+.hvw-5 {
+  height: 5vw !important;
+}
+
+.hvw-10 {
+  height: 10vw !important;
+}
+
+.hvw-15 {
+  height: 15vw !important;
+}
+
+.hvw-20 {
+  height: 20vw !important;
+}
+
+.hvw-25 {
+  height: 25vw !important;
+}
+
+.hvw-30 {
+  height: 30vw !important;
+}
+
+.hvw-35 {
+  height: 35vw !important;
+}
+
+.hvw-40 {
+  height: 40vw !important;
+}
+
+.hvw-45 {
+  height: 45vw !important;
+}
+
+.hvw-50 {
+  height: 50vw !important;
+}
+
+.hvw-55 {
+  height: 55vw !important;
+}
+
+.hvw-60 {
+  height: 60vw !important;
+}
+
+.hvw-65 {
+  height: 65vw !important;
+}
+
+.hvw-70 {
+  height: 70vw !important;
+}
+
+.hvw-75 {
+  height: 75vw !important;
+}
+
+.hvw-80 {
+  height: 80vw !important;
+}
+
+.hvw-85 {
+  height: 85vw !important;
+}
+
+.hvw-90 {
+  height: 90vw !important;
+}
+
+.hvw-95 {
+  height: 95vw !important;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7282,6 +7586,70 @@ button.bg-dark:focus {
   box-shadow: none !important;
 }
 
+.w-5 {
+  width: 5% !important;
+}
+
+.w-10 {
+  width: 10% !important;
+}
+
+.w-15 {
+  width: 15% !important;
+}
+
+.w-20 {
+  width: 20% !important;
+}
+
+.w-30 {
+  width: 30% !important;
+}
+
+.w-35 {
+  width: 35% !important;
+}
+
+.w-40 {
+  width: 40% !important;
+}
+
+.w-45 {
+  width: 45% !important;
+}
+
+.w-55 {
+  width: 55% !important;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+.w-65 {
+  width: 65% !important;
+}
+
+.w-70 {
+  width: 70% !important;
+}
+
+.w-80 {
+  width: 80% !important;
+}
+
+.w-85 {
+  width: 85% !important;
+}
+
+.w-90 {
+  width: 90% !important;
+}
+
+.w-95 {
+  width: 95% !important;
+}
+
 .w-25 {
   width: 25% !important;
 }
@@ -7300,6 +7668,70 @@ button.bg-dark:focus {
 
 .w-auto {
   width: auto !important;
+}
+
+.h-5 {
+  height: 5% !important;
+}
+
+.h-10 {
+  height: 10% !important;
+}
+
+.h-15 {
+  height: 15% !important;
+}
+
+.h-20 {
+  height: 20% !important;
+}
+
+.h-30 {
+  height: 30% !important;
+}
+
+.h-35 {
+  height: 35% !important;
+}
+
+.h-40 {
+  height: 40% !important;
+}
+
+.h-45 {
+  height: 45% !important;
+}
+
+.h-55 {
+  height: 55% !important;
+}
+
+.h-60 {
+  height: 60% !important;
+}
+
+.h-65 {
+  height: 65% !important;
+}
+
+.h-70 {
+  height: 70% !important;
+}
+
+.h-80 {
+  height: 80% !important;
+}
+
+.h-85 {
+  height: 85% !important;
+}
+
+.h-90 {
+  height: 90% !important;
+}
+
+.h-95 {
+  height: 95% !important;
 }
 
 .h-25 {
@@ -9478,6 +9910,21 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+.inner-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.rotate-ccw-90 {
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+
+.nav-item-base-right-arrow {
+  transform: scaleX(0.8);
+  font-size: 3em;
 }
 
 @media (max-width: 767.98px) {

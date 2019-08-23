@@ -35,9 +35,9 @@ class TopStaticMainNav extends React.Component {
                 const elem = <Nav.Item key={lnk.to}  >
                     {(() => lnk.link
                             ?
-                            <Link to={lnk.to} active={idx === 0} className={linkClass}><Icon /></Link>
+                            <Link to={lnk.to} active={(idx === 0).toString()} className={linkClass}><Icon /></Link>
                             :
-                            <Nav.Link href={lnk.to} active={idx === 0} className={linkClass}><Icon /></Nav.Link>)()
+                            <Nav.Link href={lnk.to} active={(idx === 0).toString()} className={linkClass}><Icon /></Nav.Link>)()
                     }
                 </Nav.Item>;
 

@@ -1,11 +1,17 @@
 import React from 'react';
+import NavItemBase from '../components/NavItemBase.js';
+import { Row } from 'react-bootstrap';
 
 const HomePage = (props) => {
     return (
-        <div >
-            <h3>STUDYSNAMI</h3>
-            <p>Welcome to your online booking and tracking plaform!</p>
-        </div>
+        <React.Fragment>
+            <h3 className='row'>STUDYSNAMI</h3>
+            <div >
+
+                <p>Welcome to your online booking and tracking plaform!</p>
+                <NavItemBase />
+            </div>
+        </React.Fragment>
     );
 }
 

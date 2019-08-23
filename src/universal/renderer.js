@@ -29,8 +29,9 @@ export default (req, store, context) => {
                 <meta charset="utf-8">
                 <link href='bootstrap_bundle.min.css' rel='stylesheet'>
                 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link href="/fonts/open-iconic-bootstrap.css" rel="stylesheet"></link>
-    <link href="/fonts/iconmonstr-iconic-font.min.css" rel="stylesheet">
+                <link href="/fonts/iconmonstr-iconic-font.min.css" rel="stylesheet">
+	<link href="/fonts/open-iconic-bootstrap.css" rel="stylesheet">
+    
     
                 <title>БЕЗ ГРАНИЦ - АНГЛИЙСКИЙ ЯЗЫК — МАЛЬТА — WITHOUT BORDERS</title>
                 ${helmet.title.toString()}

@@ -31,7 +31,16 @@ $timeline-hor-turn-heigth: 5vw;
 
  @import "./bootstrap431/_functions.scss";
  @import "./bootstrap431/_variables.scss";
+
+ // custom variabbles overrides
+@import "./_variables_overrides.scss";
+@import "./_variables_extra.scss";
+
  @import "./bootstrap431/_mixins.scss";
+
+ // custom mixins
+ @import "./_custom_mixins.scss";
+
  //@import "./bootstrap431/mixins/breakpoints";
  @import "./bootstrap431/_root.scss";
  @import "./bootstrap431/_reboot.scss";
@@ -67,6 +76,15 @@ $timeline-hor-turn-heigth: 5vw;
  @import "./bootstrap431/_spinners.scss";
  @import "./bootstrap431/_utilities.scss";
  @import "./bootstrap431/_print.scss";
+
+ // custom styles
+ @import "./hv_wv.scss"; 
+ @import "./position.scss";
+ @import "./single_use_classes.scss";
+
+ 
+
+
 
  @include media-breakpoint-down(sm) {
   .container {
