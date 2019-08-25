@@ -44,7 +44,7 @@ class TopStaticMainNav extends React.Component {
                 return elem;
 
             });
-            console.log(links);
+            //console.log(links);
             return links;
         };
         const links = buildTopStaticMainNavIcons();

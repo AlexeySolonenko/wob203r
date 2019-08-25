@@ -18,7 +18,7 @@ export default (req, store, context) => {
         </Provider>
     );
     const matchedRoute = matchRoutes(Routes, req.path);
-    console.log('matchedRoute', matchedRoute);
+    //console.log('matchedRoute', matchedRoute);
     const helmet = Helmet.renderStatic();
     //console.log('context after renderer',context);
     return (/* html */

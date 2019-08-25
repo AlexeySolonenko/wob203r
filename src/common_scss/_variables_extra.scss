@@ -3,6 +3,8 @@ $sizesVH: () !default;
 $sizesVH: map-merge(
     (
         5: 5vh,
+        7: 7vh,
+        8: 8vh,
         10: 10vh,
         15: 15vh,
         20: 20vh,
@@ -28,6 +30,8 @@ $sizesVW: () !default;
 $sizesVW: map-merge(
     (
         5: 5vw,
+        7: 7vw,
+        8: 8vw,
         10: 10vw,
         15: 15vw,
         20: 20vw,

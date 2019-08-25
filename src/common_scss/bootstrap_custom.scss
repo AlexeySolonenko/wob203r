@@ -4,32 +4,13 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
- $body-bg: #ffffffde;
- $body-color: rgb(0, 0, 0);
- $headings-color:           rgb(155, 30, 30);
-
- $container-max-widths: (
-  sm: 100%,
-  md: 100%,
-  lg: 95%,
-  xl: 90%
-) ;
 
 
-$red:     #cc001f;
-$green: #808000;
-$light-gray: #bfc3c7;
-$link-color: $red;
-$navbar-light-color:$red;
-/* $nav-tabs-link-active-color:        colors('gray');*/
-$navbar-light-color: $red;
 
-$border-wide: 5px;
-$border-timeline-rad: 25%;
-$timeline-hor-turn-heigth: 5vw;
     
 
  @import "./bootstrap431/_functions.scss";
+ @import "./_variables_pre_overrides.scss";
  @import "./bootstrap431/_variables.scss";
 
  // custom variabbles overrides
@@ -78,7 +59,6 @@ $timeline-hor-turn-heigth: 5vw;
  @import "./bootstrap431/_print.scss";
 
  // custom styles
- @import "./hv_wv.scss"; 
  @import "./position.scss";
  @import "./single_use_classes.scss";
 
