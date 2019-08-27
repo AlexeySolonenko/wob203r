@@ -18,7 +18,7 @@ export default [
             {
                 ...CoursesPage,
                 path: '/courses',
-                exact: true,
+                //exact: true,
             }, 
             {
                 ...TestimonialsPage,

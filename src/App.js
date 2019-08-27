@@ -1,20 +1,18 @@
 import React from 'react';
 import { renderRoutes } from 'react-router-config';
 import Header from './components/main_nav/Header.js';
+import MainNav from './components/main_nav/MainNav.js';
 import { fetchCurrentUser } from './actions/fetchCurrentUser.js';
 import { fetchPaths } from './actions/fetchPaths.js';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const App = (props) => {
-    //console.log(props);
-    console.log('rendering app');
+   
     const route = props.route;
     return (
         <React.Fragment>
-            {/* <Container className='test' > */}
-                <Header />
-            {/* </Container> */}
+                <MainNav {...props}/>
             <Container >
                 <section className="core-content">
                     <Row className="no-gutters-sm">

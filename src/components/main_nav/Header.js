@@ -6,8 +6,9 @@ import MainNav from './MainNav.js';
 
 const Header = (props) => {
     const auth = props.auth;
+
     //console.log('Auth object is: ', auth);
-    //console.log('Header props', props);
+    console.log('Header props', props);
     const authButton = auth ? (
         <a href="/api/logout">Logout</a>
     ) : (
