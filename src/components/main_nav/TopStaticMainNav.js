@@ -30,7 +30,6 @@ class TopStaticMainNav extends React.Component {
             const links = data.map((lnk, idx) => {
                 const linkClass = 'text-white font-weight-bold';
                 const Icon = ()=> <i className={lnk.icon}></i>;
-                console.log('idx',idx);
 
                 const elem = <Nav.Item key={lnk.to}  >
                     {(() => lnk.link
@@ -44,7 +43,7 @@ class TopStaticMainNav extends React.Component {
                 return elem;
 
             });
-            //console.log(links);
+            
             return links;
         };
         const links = buildTopStaticMainNavIcons();

@@ -15,7 +15,9 @@ app.use(express.static('public'));
 /* TODO to establish communicaton later */
 app.use('/api', proxy('http://apitest.tab4lioz.beget.tech'))
 
-app.get('*', (req, res) => {
+//app.get('*', (req, res) => {
+/* shame to copy a regex, but I'm slowly learning in parallel! */
+app.get(/^[^.]+$|\.(?!(js|css|png|jpeg|ico)$)([^.]+$)/, (req, res) => {
     const store = createStore(req);
 
     const promises = matchRoutes(Routes, req.path).map(({ route }) => {
@@ -44,5 +46,5 @@ app.get('*', (req, res) => {
 const port = process.env.port || 3000;
 console.log('in index checking what about  ');
 app.listen(port, () => {
-    console.log('Listening on port ',port);
+    console.log('Listening on port  ',port);
 });

@@ -20,7 +20,7 @@ const store = createStore(reducers, window.INITIAL_STORE, applyMiddleware(thunk.
 export default () =>
     <Provider store={store} >
         <BrowserRouter >
-            <div>{renderRoutes(Routes)}</div>
+            {renderRoutes(Routes)}
         </BrowserRouter>
     </Provider>;
 

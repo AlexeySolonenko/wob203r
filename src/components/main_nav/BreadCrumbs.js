@@ -1,13 +1,12 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
+import { Col, Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const BreadCrumbs = (props) => {
 
-    console.log('brdcrmbs', props);
-
     let pathParts = props.location.pathname;
+    pathParts = pathParts.replace('/show_collapsible','');
     if (pathParts.charAt(0) === '/') pathParts = pathParts.slice(1);
     pathParts = pathParts.split('/');
 
@@ -23,20 +22,24 @@ const BreadCrumbs = (props) => {
         }
     }
 
-    //console.log(findPath(props.paths, pathParts, 0));
-    console.log(pathParts);
+    const backBtnClickHndlr = () => {
+        props.closeSmMenu();
+        props.history.goBack();
+    }
+
     return (
-        <Col>
+        <Col xs="auto">
+            <a href='' onClick={backBtnClickHndlr}>{"<<"} | </a>
             {
                 pathParts.map((p, idx, all) => {
-                    //let to = p + all.slice(0, idx).join('/');
-                    let to = '/' + all.slice(0, idx+1).join('/');
-                    //let to = '/' + p;
+                    let to = '/' + all.slice(0, idx + 1).join('/');
 
                     let text = findText(props.paths, all.slice(0, idx + 1))
                     let slash = idx === 0 ? '' : ' / ';
+
+                    const lastClass = idx === (pathParts.length -1) ? 'text-dark' : '';
                     return (
-                        <NavLink key={to} to={to}>{(slash + text)}</NavLink>
+                        <NavLink className={lastClass} onClick={props.closeSmMenu} key={to} to={to}>{(slash + text)}</NavLink>
                     );
                 })
             }

@@ -19,7 +19,6 @@ class NavItemBase extends React.Component {
     }
 
     render() {
-        //console.log(this.props);
         const contentOpened = !this.state.contentAreaOpened && 'd-none';
         const contentOpenedArrow = this.state.contentAreaOpened ? 'top' : 'bottom';
         return (

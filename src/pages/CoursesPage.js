@@ -4,7 +4,7 @@ import { Col, Row } from 'react-bootstrap';
 
 
 const CoursesPage = (props) => {
-    console.log('courses props', props);
+  
     const m = props.match.url;
     return (
         <Row >

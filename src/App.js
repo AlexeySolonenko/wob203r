@@ -1,14 +1,14 @@
 import React from 'react';
 import { renderRoutes } from 'react-router-config';
-import Header from './components/main_nav/Header.js';
 import MainNav from './components/main_nav/MainNav.js';
 import { fetchCurrentUser } from './actions/fetchCurrentUser.js';
 import { fetchPaths } from './actions/fetchPaths.js';
+import { fetchViewParams } from './actions/fetchViewParams.js';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const App = (props) => {
-   
+    
     const route = props.route;
     return (
         <React.Fragment>
@@ -29,6 +29,11 @@ const App = (props) => {
 
 export default {
     component: App,
-    loadData: ({ dispatch }) => dispatch(fetchPaths())
+    loadData: ({ dispatch }) => 
+        Promise.all([dispatch(fetchPaths()),dispatch(fetchViewParams())])
+    //    {
+    //               paths: () => dispatch(fetchPaths()),
+    //    viewParams: () => dispatch(fetchViewParams())
+    //    }),
     //loadData: loadData
 };

@@ -89,6 +89,10 @@
   width: 95vh !important;
 }
 
+.wvh-100 {
+  width: 100vh !important;
+}
+
 .hvh-5 {
   height: 5vh !important;
 }
@@ -171,6 +175,10 @@
 
 .hvh-95 {
   height: 95vh !important;
+}
+
+.hvh-100 {
+  height: 100vh !important;
 }
 
 .wvw-5 {
@@ -257,6 +265,10 @@
   width: 95vw !important;
 }
 
+.wvw-100 {
+  width: 100vw !important;
+}
+
 .hvw-5 {
   height: 5vw !important;
 }
@@ -339,6 +351,10 @@
 
 .hvw-95 {
   height: 95vw !important;
+}
+
+.hvw-100 {
+  height: 100vw !important;
 }
 
 :root {
@@ -9957,6 +9973,44 @@ a.text-dark:hover, a.text-dark:focus {
 .nav-item-base-right-arrow {
   transform: scaleX(0.8);
   font-size: 3em;
+}
+
+.linear-bottom-black-20 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to bottom, transparent, 85%, black);
+}
+
+.linear-bottom-top-15 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to top, transparent, 85%, black);
+}
+
+.img-overlay-left {
+  position: absolute;
+  background: linear-gradient(to bottom, transparent, 50%, #c1d3e6);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.img-overlay-left-container:hover .img-overlay-left {
+  width: 100%;
 }
 
 @media (max-width: 767.98px) {
