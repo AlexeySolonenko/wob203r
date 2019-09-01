@@ -14,13 +14,16 @@ const MainNavLg = (props) => {
         if (!depth) depth = 0;
         if (depth >= seekable.length - 1) {
             console.log('building nestted path');
-            return paths;
+            //return paths;
 
             return paths.map((p) => {
-                p.nestedPath = '/'+seekable.slice(0,depth).join('/') + p.path;
-                console.log(p);
+                let ret = Object.assign({},p);
+                console.log('ret', ret);
 
-                return p;
+                ret.nestedPath = '/'+seekable.slice(0,depth).join('/') + p.path;
+                console.log(ret);
+
+                return ret;
             });
         }
         let nestedPaths = false;
@@ -54,7 +57,7 @@ const MainNavLg = (props) => {
                     
                     return (
                         <Nav.Item key={p.name}>
-                            <NavLink to={p.path} className={activeState}
+                            <NavLink to={p.nestedPath} className={activeState}
                             >{txt}</NavLink>
                         </Nav.Item>
                     );
