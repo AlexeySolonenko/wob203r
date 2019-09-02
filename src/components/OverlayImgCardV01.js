@@ -6,7 +6,7 @@ const OverlayImgCardV01 = (props) => {
     return (
         <Card className='img-overlay-left-container'>
             {props.srcset ? props.srcset :
-                <Card.Img src={props.img.src}>
+                <Card.Img src={props.img.src} alt={props.img.alt}>
                 </Card.Img>
             }
             <div className="linear-bottom-top-15"></div>

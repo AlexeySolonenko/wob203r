@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { Nav } from 'react-bootstrap';
+import { Col, Nav,Row } from 'react-bootstrap';
 
 const MainNavLg = (props) => {
 
@@ -17,10 +17,10 @@ const MainNavLg = (props) => {
             //return paths;
 
             return paths.map((p) => {
-                let ret = Object.assign({},p);
+                let ret = Object.assign({}, p);
                 console.log('ret', ret);
 
-                ret.nestedPath = '/'+seekable.slice(0,depth).join('/') + p.path;
+                ret.nestedPath = ('/' + seekable.slice(0, depth).join('/') + p.path).replace('//', '/');
                 console.log(ret);
 
                 return ret;
@@ -39,7 +39,7 @@ const MainNavLg = (props) => {
         if (nestedPaths === undefined || !nestedPaths) {
             return paths;
         } else {
-            
+
             return findPathsArr(nestedPaths.paths, seekable, ++depth);
         }
     };
@@ -49,21 +49,27 @@ const MainNavLg = (props) => {
 
 
     return (
-        <Nav>
-            {
-                pathsToBuild.map((p, idx) => {
-                    let activeState = (props.location.pathname.indexOf(p.path) > -1) ? 'text-dark' : '';
-                    const txt = activeState ? <u>{p.text+"\u00a0\u00a0"}</u> : (p.text+"\u00a0\u00a0");
-                    
-                    return (
-                        <Nav.Item key={p.name}>
-                            <NavLink to={p.nestedPath} className={activeState}
-                            >{txt}</NavLink>
-                        </Nav.Item>
-                    );
-                })
-            }
-        </Nav>
+        <Row className=' align-items-center d-none d-lg-block h-50'>
+            <Col xs='12'>
+                <Nav style={{ fontSize: '0.75em' }}>
+                    {
+                        pathsToBuild.map((p, idx) => {
+                            let activeState = (props.location.pathname.indexOf(p.path) > -1) ? 'text-dark' : '';
+                            const txt = activeState ? <u>{p.text + "\u00a0\u00a0"}</u> : (p.text + "\u00a0\u00a0");
+
+                            return (
+                                <Nav.Item key={p.name}>
+                                    <NavLink
+                                        to={p.nestedPath}
+                                        className={activeState + " my-auto"}
+                                    >{txt}</NavLink>
+                                </Nav.Item>
+                            );
+                        })
+                    }
+                </Nav>
+            </Col>
+        </Row>
     );
 };
 

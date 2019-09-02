@@ -28,7 +28,7 @@ const BreadCrumbs = (props) => {
     }
 
     return (
-        <Col xs="auto">
+        <Col xs="auto" >
             <a href='' onClick={backBtnClickHndlr}>{"<<"} | </a>
             {
                 pathParts.map((p, idx, all) => {
@@ -39,7 +39,7 @@ const BreadCrumbs = (props) => {
 
                     const lastClass = idx === (pathParts.length -1) ? 'text-dark' : '';
                     return (
-                        <NavLink className={lastClass} onClick={props.closeSmMenu} key={to} to={to}>{(slash + text)}</NavLink>
+                        <NavLink className={lastClass} onClick={props.closeSmMenu} key={to} to={to} style={{fontSize:'0.75em'}}>{(slash + text)}</NavLink>
                     );
                 })
             }
