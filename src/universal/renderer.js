@@ -26,7 +26,6 @@ export default (req, store, context) => {
             </StaticRouter>
         </Provider>
     );
-
     const matchedRoute = matchRoutes(Routes, req.path);
     const helmet = Helmet.renderStatic();
     const bundlePath = toRoot + "bundle.js";
@@ -51,6 +50,7 @@ export default (req, store, context) => {
                     <div id='root'>${content}</div>
                     <script>
                         window.INITIAL_STORE = ${JSON.stringify(store.getState())};
+                        window.APP_CONFIG = ${JSON.stringify(global.APP_CONFIG)};
                     </script>
                     <script type="text/javascript" src="${toRoot + "bundle.js"}"></script>
                 </body>

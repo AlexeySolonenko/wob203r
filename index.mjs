@@ -6,9 +6,20 @@ import proxy from 'express-http-proxy';
 import reatRouterConfig from 'react-router-config';
 const matchRoutes = reatRouterConfig.matchRoutes;
 import Routes from './src/routes/Routes.js';
+import { createRequire } from 'module';
+import dirname from './src/crutches/dirname.cjs';
 
+//import webapp_config from './webapp_config.js';
 
-const app = express();
+import config from 'config';
+global.APP_CONFIG= config.get('appConfig');
+
+//http://apitest.tab4lioz.beget.tech/
+
+// const require = createRequire(dirname);
+// const webapp_config = require('./webapp_config.js');
+// console.log(APP_CONFIG);
+ const app = express();
 /* serve static files, like client bundle, some assets, from public folder */
 app.use(express.static('public'));
 

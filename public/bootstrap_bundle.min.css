@@ -9983,7 +9983,7 @@ a.text-dark:hover, a.text-dark:focus {
   bottom: 0;
   padding: 0;
   margin: 0;
-  background: linear-gradient(to bottom, transparent, 85%, black);
+  background-image: linear-gradient(to bottom, transparent, 85%, black);
 }
 
 .linear-bottom-top-15 {

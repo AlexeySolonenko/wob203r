@@ -52,6 +52,7 @@ const asyncReadAndDeployFiles = async (files,connectConfig) => {
         
         await deployFiles(res.slice(0,res.length -1),res[res.length-1]);
         res[res.length-1].end();
+        console.log('deploy completed');
     } catch (e) {
         console.log(e);
     }

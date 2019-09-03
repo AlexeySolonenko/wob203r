@@ -13,7 +13,7 @@ const HeroFriendBase = (props) => {
                 <Row className='h-100 align-items-end '>
                     <Col xs='12'>
                         <Row>
-                            <Col xs='12' className='text-white' style={{ fontSize: '1.2.em;' }}>
+                            <Col xs='12' className='text-white' style={{ fontSize: '1.2.em' }}>
                                 <b>{props.title}</b>
                             </Col>
                         </Row>

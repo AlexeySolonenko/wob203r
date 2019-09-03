@@ -15,6 +15,7 @@ const HomePage = (props) => {
         props.history.replace('/home');
     }
 
+
     console.log('home page props', props);
     return (
         <React.Fragment>
@@ -61,8 +62,8 @@ const HomePage = (props) => {
 const loadData = (store) => {
     return store.dispatch(fetchPaths());
 }
-const mapStateToProps = ({ paths }) => {
-    return ({ paths });
+const mapStateToProps = ({ paths, proc }) => {
+    return ({ paths, proc });
 };
 export default {
     component: connect(mapStateToProps)(HomePage),

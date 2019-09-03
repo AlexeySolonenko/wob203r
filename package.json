@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "@babel/runtime-corejs2": "^7.5.5",
+    "config": "^3.2.2",
     "core-js": "^2.6.9",
     "react-redux": "^7.0.0",
     "react-responsive": "^8.0.0",

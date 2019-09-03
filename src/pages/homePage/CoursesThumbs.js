@@ -39,37 +39,37 @@ const CoursesThumbs = (props) => {
 
     const restOfCourses = [
         {
-            src: '/img/home/2019q3-home-courses-business-001--xs.PNG',
+            src: '/img/home/2019q3-home-courses-business-001--xs.png',
             text: 'БИЗНЕС',
             to: '/courses/business',
             alt: 'Russian rising star cameraman in a tuxedo in a dance hug with a young slim lady in red. Both on a red velvet carpet in Cannes on a cinema international event.'
         },
         {
-            src: '/img/home/2019q3-home-courses-family-kids-001--xs.PNG',
+            src: '/img/home/2019q3-home-courses-family-kids-001--xs.png',
             text: 'ДЛЯ ВСЕЙ СЕМЬИ И ДЕТЕЙ',
             to: '/courses/family',
             alt: 'Kids and a teacher having fun in a classroom.'
         },
         {
-            src: '/img/home/2019q3-home-courses-summer-camp-001--xs.PNG',
+            src: '/img/home/2019q3-home-courses-summer-camp-001--xs.png',
             text: 'ЛЕТНИЙ ЛАГЕРЬ',
             to: '/courses',
             alt: 'Mixed group of people doing yoga on a rocky beach with a cafe in a closer background, with a high rise building in a far backgraound, and a sea view'
         },
         {
-            src: '/img/home/2019q3-home-courses-long-term-001--xs.PNG',
+            src: '/img/home/2019q3-home-courses-long-term-001--xs.png',
             text: 'ДОЛГОСРОЧНЫЕ ПРОГРАММЫ',
             to: '/courses/long-term',
             alt: 'Goup of long-term students in a school lobby posing for a photo.'
         },
         {
-            src: '/img/home/2019q3-home-courses-exams-001--xs.PNG',
+            src: '/img/home/2019q3-home-courses-exams-001--xs.png',
             text: 'МЕЖДУНАРОДНЫЕ ЭКЗАМЕНЫ',
             to: '/courses/certs',
             alt: 'Students struggling with exam preparation in a classrom. Many a holding one or two palms on their heads.',
         },
         {
-            src: '/img/home/2019q3-home-courses-teachers-001--xs.PNG',
+            src: '/img/home/2019q3-home-courses-teachers-001--xs.png',
             text: 'АККРЕДИТАЦИЯ УЧИТЕЛЕЙ',
             to: '/courses',
             alt: 'A guy and a girl with certificates in hands are standing facing camera.'

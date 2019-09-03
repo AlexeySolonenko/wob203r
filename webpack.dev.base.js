@@ -11,7 +11,7 @@ module.exports = {
                 type:'javascript/auto',
                 exclude: 
                 [ 
-                    /(node_modules|public)/,
+                    /(node_modules|public|webapp_config)/,
                     // path.resolve(__dirname,  '/public'),
                     // path.resolve(__dirname, '/confidential')
             ],
