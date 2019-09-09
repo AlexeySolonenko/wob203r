@@ -7,7 +7,8 @@ export default (props) => {
     //to = props.location.pathname.replace('/show_collapsible', '') + to;
 
     return (
-        <Row className='h-100 align-items-center'>
+        // <Row className='h-100 align-items-center'>
+        <Row className=' align-items-center'>
             <Col xs='auto'>Цены</Col>
             <Col xs='auto'>
                 <NavLink onClick={props.closeSmMenu} to='/contact'>

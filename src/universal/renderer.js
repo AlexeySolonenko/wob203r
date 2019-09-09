@@ -46,7 +46,7 @@ export default (req, store, context) => {
                 ${helmet.title.toString()}
                 ${helmet.meta.toString()}
                 </head>
-                <body>
+                <body class="d-flex flex-column h-100">
                     <div id='root'>${content}</div>
                     <script>
                         window.INITIAL_STORE = ${JSON.stringify(store.getState())};

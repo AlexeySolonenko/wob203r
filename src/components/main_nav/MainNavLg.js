@@ -49,7 +49,8 @@ const MainNavLg = (props) => {
 
 
     return (
-        <Row className=' align-items-center d-none d-lg-block h-50'>
+        // <Row className=' align-items-center d-none d-lg-block h-50'>
+        <Row className=' align-items-center d-none d-lg-block '>
             <Col xs='12'>
                 <Nav style={{ fontSize: '0.75em' }}>
                     {

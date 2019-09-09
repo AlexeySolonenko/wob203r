@@ -3,32 +3,55 @@ import fs from 'fs';
 import path from 'path';
 import dirname from '../src/crutches/dirname.cjs';
 import asyncReadAndDeployFiles from './asyncReadAndDeployFiles.js';
-import  client_dev_ftp_connect from '../confidential/client_dev_ftp_connect.js';
+import client_dev_ftp_connect from '../confidential/client_dev_ftp_connect.js';
+import autoprefixer from 'autoprefixer';
+import postcss from 'postcss';
 
 /* handle paths  */
 const boostrapPath = path.resolve(dirname, '../../public/bootstrap_bundle.min.css');
-const bootstrapSourcePath = path.resolve(dirname,'../common_scss/bootstrap_custom.scss');
+const boostrapTmpPath = path.resolve(dirname, '../../tmp/bootstrap_bundle.min.css');
+const bootstrapSourcePath = path.resolve(dirname, '../common_scss/bootstrap_custom.scss');
 
 /* prepare parts */
 const config = {
-    file:bootstrapSourcePath,
+    file: bootstrapSourcePath,
     outputStyle: 'expanded',
-    outFile: boostrapPath,
+    //outFile: boostrapPath,
+    outFile: boostrapTmpPath,
 };
 
-const deploy = asyncReadAndDeployFiles.bind(null,['./public/bootstrap_bundle.min.css'],client_dev_ftp_connect);
+// const deploy = asyncReadAndDeployFiles.bind(null,['./public/bootstrap_bundle.min.css'],client_dev_ftp_connect);
+// const cb = async function (error, result) {
+//     if (!error) {
+//         fs.writeFile(boostrapPath, result.css, async function (err) {
+//             if (err) console.log(err);
+//             else {
+//                 await deploy();
+//                 console.log('scss deployment completed, see log above or below for extra details');
+//             }
+//         });
+//     } else{
+//         console.log(error);
+//     }
+// }
+
+const deploy = asyncReadAndDeployFiles.bind(null, ['./public/bootstrap_bundle.min.css'], client_dev_ftp_connect);
 const cb = async function (error, result) {
     if (!error) {
-        fs.writeFile(boostrapPath, result.css, async function (err) {
+        console.log('start post process');
+        const postProcessed = await postcss([autoprefixer()]).process(result.css, { from: boostrapTmpPath, to: boostrapPath });
+       
+        fs.writeFile(boostrapPath, postProcessed.css, async function (err) {
             if (err) console.log(err);
             else {
+                console.log('start deploye');
                 await deploy();
                 console.log('scss deployment completed, see log above or below for extra details');
             }
         });
-    } else{
+    } else {
         console.log(error);
     }
 }
-
-sass.render(config,cb);
+console.log('start render');
+sass.render(config, cb);
