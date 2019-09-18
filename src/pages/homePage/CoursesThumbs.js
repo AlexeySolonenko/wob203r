@@ -86,7 +86,7 @@ const CoursesThumbs = (props) => {
             </Col>
             <Col xs='12' sm='6' as={NavLink} to='/courses/short-term'>
                 <OverlayImgCardV01 srcset={packages}>
-                    <Col xs='12' className="text-white" style={{ fontSize: "1.2em" }}><b>ПАКЕТНЫЕ ПРЕДЛОЖЕНИЯ</b></Col>
+                    <Col xs='12' className="text-white" ><b>ПАКЕТНЫЕ ПРЕДЛОЖЕНИЯ</b></Col>
                 </OverlayImgCardV01>
             </Col>
 
@@ -95,9 +95,9 @@ const CoursesThumbs = (props) => {
                 restOfCourses.map((imgProps) => {
 
                     return (
-                        <Col xs='4' as={NavLink} to={imgProps.to} key={imgProps.to}>
+                        <Col xs='6' md="4" as={NavLink} to={imgProps.to} key={imgProps.to}>
                             <OverlayImgCardV01 img={imgProps} >
-                                <Col xs='12' className="text-white" style={{ fontSize: "1.2em" }}><b>{imgProps.text}</b></Col>
+                                <Col xs='12' className="text-white" ><b>{imgProps.text}</b></Col>
                             </OverlayImgCardV01>
                         </Col>
                     );

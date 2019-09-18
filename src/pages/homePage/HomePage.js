@@ -1,13 +1,13 @@
 import React from 'react';
-import NavItemBase from '../../components/NavItemBase.js';
 import { Row, Col, Button, Card } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { fetchPaths } from '../../actions/fetchPaths.js';
 import { connect } from 'react-redux';
 import Hero from './Hero.js';
-import HeroFriendsAll from './HeroFriendsAll.js';
 import WhyUs from './WhyUs.js';
 import CoursesThumbs from './CoursesThumbs.js';
+import HeroFriendsAllLg from './HeroFriendsAllLg.js';
+import HeroFriendsAllXsMd from './HeroFriendsAllXsMd.js';
 
 const HomePage = (props) => {
 
@@ -19,36 +19,38 @@ const HomePage = (props) => {
     console.log('home page props', props);
     return (
         <React.Fragment>
-            {/* hero block */}
-            <Row noGutters className="d-flex h-100 border-bottom pb-5 border-primary">
-                <Col xs='12' md='8' className="flex-grow-1 d-flex">
-                    <Hero />
-                </Col>
-                <Col xs='12' md='4' className="flex-grow-1 d-flex" >
-                    <HeroFriendsAll />
+            {/* HERO */}
+            <Row className=" no-gutters ">
+                <Hero />
+                <Col lg='4' className=" d-none d-lg-flex  align-self-stretch " >
+                    <HeroFriendsAllLg />
                 </Col>
             </Row>
-            {/* why us*/}
+            <Row className="d-flex d-lg-none  no-gutters border-bottom border-primary">
+                <HeroFriendsAllXsMd />
+            </Row>
+            <div className="mb-1 border-bottom border-primary"></div>
 
-            <Row ><Col xs='12' className='text-center mt-5'><h3>ЧТО МЫ МОЖЕМ ВАМ ПРЕДЛОЖИТЬ</h3></Col></Row>
+            {/* WHY US */}
+            <Row className="no-gutters-sm " >
+                <Col xs='12' className='  text-center mt-1'>
+                    <h3>ЧТО МЫ МОЖЕМ ВАМ ПРЕДЛОЖИТЬ</h3>
+                </Col>
+            </Row>
             <WhyUs />
-
-            <Row className='mt-5'>
+            
+            <Row className='no-gutters-sm mt-1'>
                 <Col xs='12' className='text-center'><h3>КУРСЫ И ПРОГРАММЫ ОБУЧЕНИЯ</h3></Col>
                 <Col xs='12'></Col>
             </Row>
             <CoursesThumbs />
-            <Row className='justify-content-center mt-5'>
+            <Row className='no-gutters-sm justify-content-center mt-5'>
                 <Col xs='auto'>
                     <Button size='lg' as={NavLink} to='/courses' className='text-center rounded-0'>ВСЕ КУРСЫ</Button>
                 </Col>
             </Row>
 
-            <Row>
-                <Col>
-                    Footer under development
-                </Col>
-            </Row>
+
             {/* <h3 className='row no-gutters-sm'>STUDYSNAMI</h3>
 
             <Row>

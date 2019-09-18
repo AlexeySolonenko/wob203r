@@ -9,16 +9,10 @@ const OverlayImgCardV01 = (props) => {
                 <Card.Img src={props.img.src} alt={props.img.alt}>
                 </Card.Img>
             }
-            <div className="linear-bottom-top-15"></div>
+            <div className="card-gradient-to-top"></div>
             <div className="img-overlay-left"></div>
             <Card.ImgOverlay>
-                <Row className='h-100 align-items-start '>
-                    <Col xs='12'>
-                        <Row>
-                            {props.children}
-                        </Row>
-                    </Col>
-                </Row>
+                <Card.Text>{props.children}</Card.Text>
             </Card.ImgOverlay>
         </Card>
     );

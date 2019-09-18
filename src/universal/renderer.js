@@ -35,8 +35,9 @@ export default (req, store, context) => {
             <html>
                 <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta charset="utf-8">
-                <link href="${toRoot + './bootstrap_bundle.min.css'}" rel='stylesheet'>
+                <link href="${toRoot + 'bootstrap_bundle.min.css'}" rel='stylesheet'>
                 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
                 <link href="${toRoot + "/fonts/iconmonstr-iconic-font.min.css"}" rel="stylesheet">
 	<link href="${toRoot + "./fonts/open-iconic-bootstrap.css"}" rel="stylesheet">

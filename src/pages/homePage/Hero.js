@@ -3,29 +3,38 @@ import { Card, Col, Button, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+
 const Hero = (props) => {
     /* 193 x 400*/
+    /* height 550 */
+    /* 183    560*267  603*233  280*140 
+    314*150
+    314*157
+    314*122
+       
+    */
     const mbMd = props.viewParams.mediaBreakPoints.md;
+    const mbLg = props.viewParams.mediaBreakPoints.lg;
     const mbSm = props.viewParams.mediaBreakPoints.sm;
 
     const HeroMainPic = (
         <picture>
-            <source srcSet="/img/home/2019q3-home-hero-001--lg.png" media={"(min-width:" + mbMd + "px)"} />
-            <source srcSet="/img/home/2019q3-home-hero-001--sm.png" media={"(min-width:" + mbSm + "px)"} />
+            <source srcSet="/img/home/2019q3-home-hero-001--lg.png" media={"(min-width:" + mbLg + "px)"} />
+            <source srcSet="/img/home/2019q3-home-hero-001--sm.png" media={"(min-width:" + mbMd + "px)"} />
             <img
                 src='/img/home/2019q3-home-hero-001--xs.png'
                 alt='Young lady in sunshine against the Balluta Bay view and local coastal Cathedral in the background'
-                className='card-img img-after-to-bottom-black-gradient-20'
+                className='card-img '
             />
         </picture>);
 
     return (
 
-        <Card >
+        <Card className=" col-12 col-lg-8 d-flex ">
             {HeroMainPic}
-            <div className='linear-bottom-black-20'></div>
+            <div className='hero-gradient-to-bottom'></div>
             <Card.ImgOverlay >
-                <Row className='h-100 align-items-end '>
+                <Row className=' align-items-end h-100  '>
                     <Col xs='12'>
                         <Row>
                             <Col xs='auto' className='rounded'>
@@ -33,7 +42,7 @@ const Hero = (props) => {
                             </Col>
                             <Col xs='12' className=""></Col>
                             <Col xs='auto'
-                                style={{ fontSize: "1.5em" }} className='font-weight-bold text-white rounded mb-3' >
+                                className='font-weight-bold text-white rounded mb-3' >
                                 Учи английский на солнечной Мальте
                             </Col>
                             <Col xs='12'></Col>
@@ -51,3 +60,5 @@ const Hero = (props) => {
 const mapStateToProps = ({ viewParams }) => ({ viewParams });
 
 export default connect(mapStateToProps)(Hero);
+
+

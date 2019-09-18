@@ -19,8 +19,8 @@ const TopNavRow = (props) => {
 
     return (
         <React.Fragment>
-            <Col xs='auto' className='text-center'>{contact}</Col>
-            <Col xs='auto' className='text-center'>{prices}</Col>
+            <Col xs='6' lg='auto' className='text-center'>{contact}</Col>
+            <Col xs='6' lg='auto' className='text-center'>{prices}</Col>
         </React.Fragment>
     );
 };

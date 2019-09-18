@@ -16,8 +16,8 @@ const bootstrapSourcePath = path.resolve(dirname, '../common_scss/bootstrap_cust
 const config = {
     file: bootstrapSourcePath,
     outputStyle: 'expanded',
-    //outFile: boostrapPath,
     outFile: boostrapTmpPath,
+    //outFile: boostrapTmpPath,
 };
 
 // const deploy = asyncReadAndDeployFiles.bind(null,['./public/bootstrap_bundle.min.css'],client_dev_ftp_connect);

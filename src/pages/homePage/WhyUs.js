@@ -1,17 +1,17 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Card, Col, Row } from 'react-bootstrap';
 
 const WhyUs = (props) => {
 
-    const SingleBlock = (props) => {
+    const SingleBlockTest = (props) => {
 
         return (
-            <Col xs='6' md='3' className='d-flex'>
-                <Row className='h-100'>
+            <Col xs='6' md='3' className='d-flex self-align-stretch'>
+                <Row className=' w-100 no-gutters-sm'>
                     <Col xs='12'>
-                        <Row className='h-100'>
+                        <Row className=' w-100 no-gutters-sm justify-content-center text-center '>
                             <Col xs='12' className='h-50 align-self-end'>
-                                <Row className='align-items-end h-100'>
+                                <Row className='no-gutters-sm align-items-end '>
                                     <Col xs='12'>
                                         {props.children}
                                     </Col>
@@ -27,9 +27,21 @@ const WhyUs = (props) => {
         );
     }
 
+    const SingleBlock = (props) => {
+
+        return (
+            <Card as={Col} xs='6' md='3' className='d-flex border-0 self-align-stretch'>
+                <div className='row w-100 no-gutters-sm '>
+                    <Col xs='12 my-auto'>{props.children}</Col>
+                    <Col xs='12 mt-auto'>{props.text}</Col> 
+                </div>
+            </Card>
+        );
+    }
+
     return (
 
-        <Row className='justify-content-center text-center pb-5 border-bottom border-primary'>
+        <Row className='justify-content-center text-center border-bottom border-primary no-gutters-sm '>
             <SingleBlock text='Офис на Мальте'>
                 <span style={{ fontSize: '2em' }}>🌍</span>
             </SingleBlock>
