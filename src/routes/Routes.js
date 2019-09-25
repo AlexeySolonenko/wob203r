@@ -1,6 +1,6 @@
 import  HomePage  from '../pages/homePage/HomePage.js';
 import  ContactPage  from '../pages/ContactPage.js';
-import  CoursesPage  from '../pages/CoursesPage.js';
+import  CoursesPage  from '../pages/coursesPage/CoursesPage.js';
 import  DetailsPage  from '../pages/DetailsPage.js';
 import  TestimonialsPage  from '../pages/TestimonialsPage.js';
 import App from '../App.js';

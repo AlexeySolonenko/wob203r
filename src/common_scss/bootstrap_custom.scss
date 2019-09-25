@@ -67,7 +67,7 @@
 
 
  @include media-breakpoint-down(sm) {
-  .container {
+  .container.container-no-p-sm {
     padding-right:0px;
     padding-left:0px;
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Button, Card } from 'react-bootstrap';
+import { Row, Col, Container, Button, Card } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { fetchPaths } from '../../actions/fetchPaths.js';
 import { connect } from 'react-redux';
@@ -15,42 +15,41 @@ const HomePage = (props) => {
         props.history.replace('/home');
     }
 
-
-    console.log('home page props', props);
     return (
         <React.Fragment>
-            {/* HERO */}
-            <Row className=" no-gutters ">
-                <Hero />
-                <Col lg='4' className=" d-none d-lg-flex  align-self-stretch " >
-                    <HeroFriendsAllLg />
-                </Col>
-            </Row>
-            <Row className="d-flex d-lg-none  no-gutters border-bottom border-primary">
-                <HeroFriendsAllXsMd />
-            </Row>
-            <div className="mb-1 border-bottom border-primary"></div>
+            <Container className='container-no-p-sm' bsPrefix="container container-no-p-sm">
+                {/* HERO */}
+                <Row className=" no-gutters ">
+                    <Hero />
+                    <Col lg='4' className=" d-none d-lg-flex  align-self-stretch ">
+                        <HeroFriendsAllLg />
+                    </Col>
+                </Row>
+                <Row className="d-flex d-lg-none  no-gutters border-bottom border-primary">
+                    <HeroFriendsAllXsMd />
+                </Row>
+                <div className="mb-1 border-bottom border-primary"></div>
 
-            {/* WHY US */}
-            <Row className="no-gutters-sm " >
-                <Col xs='12' className='  text-center mt-1'>
-                    <h3>ЧТО МЫ МОЖЕМ ВАМ ПРЕДЛОЖИТЬ</h3>
-                </Col>
-            </Row>
-            <WhyUs />
-            
-            <Row className='no-gutters-sm mt-1'>
-                <Col xs='12' className='text-center'><h3>КУРСЫ И ПРОГРАММЫ ОБУЧЕНИЯ</h3></Col>
-                <Col xs='12'></Col>
-            </Row>
-            <CoursesThumbs />
-            <Row className='no-gutters-sm justify-content-center mt-5'>
-                <Col xs='auto'>
-                    <Button size='lg' as={NavLink} to='/courses' className='text-center rounded-0'>ВСЕ КУРСЫ</Button>
-                </Col>
-            </Row>
+                {/* WHY US */}
+                <Row className="no-gutters-sm " >
+                    <Col xs='12' className='  text-center mt-1'>
+                        <h3>ЧТО МЫ МОЖЕМ ВАМ ПРЕДЛОЖИТЬ</h3>
+                    </Col>
+                </Row>
+                <WhyUs />
 
+                <Row className='no-gutters-sm mt-1'>
+                    <Col xs='12' className='text-center'><h3>КУРСЫ И ПРОГРАММЫ ОБУЧЕНИЯ</h3></Col>
+                    <Col xs='12'></Col>
+                </Row>
+                <CoursesThumbs />
+                <Row className='no-gutters-sm justify-content-center mt-5'>
+                    <Col xs='auto'>
+                        <Button size='lg' as={NavLink} to='/courses' className='text-center rounded-0'>ВСЕ КУРСЫ</Button>
+                    </Col>
+                </Row>
 
+            </Container>
             {/* <h3 className='row no-gutters-sm'>STUDYSNAMI</h3>
 
             <Row>

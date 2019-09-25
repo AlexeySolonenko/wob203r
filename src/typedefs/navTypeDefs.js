@@ -45,7 +45,7 @@
  * @property {Object} mainTree.courses.certs
  * @property {routeItem} mainTree.courses.certs.selfNav
  * @property {Object} mainTree.courses.teachers
- * @property {routeItem} mainTree.courses.teachers.selNav
+ * @property {routeItem} mainTree.courses.teachers.selfNav
  * @property {Object} mainTree.accommodation
  * @property {routeItem} mainTree.accommodation.selfNav
  * @property {Object} mainTree.accommodation.prices

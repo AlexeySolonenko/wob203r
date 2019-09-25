@@ -12,7 +12,7 @@ const OverlayImgCardV01 = (props) => {
             <div className="card-gradient-to-top"></div>
             <div className="img-overlay-left"></div>
             <Card.ImgOverlay>
-                <Card.Text>{props.children}</Card.Text>
+                <Card.Text as={"div"} >{props.children}</Card.Text>
             </Card.ImgOverlay>
         </Card>
     );

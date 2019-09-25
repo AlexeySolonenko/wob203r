@@ -18,28 +18,22 @@ const App = (props) => {
     const route = props.route;
     return (
         <React.Fragment>
-            {/* <header >
-               
-            </header> */}
             <MainNav {...props} />
-            <main role="main" class="flex-shrink-0">
+            <main role="main" className="flex-shrink-0">
                 <section className="core-content">
-                    <Container >
-                        {/* <Row className="no-gutters-sm">
-                        <Col sm={12}  className="core-content-center"> */}
-                        {renderRoutes(route.routes)}
-                        {/* </Col>
-                    </Row> */}
-                    </Container>
+                    {renderRoutes(route.routes)}
                 </section>
             </main>
-            <footer>
-                <Row className='no-gutters-sm ' >
-                    <Col>
-                        Footer under development
-                </Col>
-                </Row>
-            </footer>
+            {/* <footer> */}
+            {/* FOOTERS */}
+                <Container className='container-no-p-sm'>
+                    <Row className='no-gutters-sm ' >
+                        <Col>
+                            <p>Footer under development</p>
+                        </Col>
+                    </Row>
+                </Container>
+            {/* </footer> */}
         </React.Fragment >
     );
 };

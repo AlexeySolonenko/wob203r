@@ -19,7 +19,14 @@ const TopNavRow = (props) => {
 
     return (
         <React.Fragment>
-            <Col xs='6' lg='auto' className='text-center'>{contact}</Col>
+            <Col lg='auto' className='text-white d-none d-lg-flex' style={
+                                    {
+                                        fontFamily:'"Caveat", cursive',
+                                        fontSize:"2em",
+                                        fontStretch:'150%',
+                                        }
+                                        }>Б.е.з. Г.р.а.н.и.ц.</Col>
+            <Col xs='6' lg='auto' className=' ml-auto text-center'>{contact}</Col>
             <Col xs='6' lg='auto' className='text-center'>{prices}</Col>
         </React.Fragment>
     );

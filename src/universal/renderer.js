@@ -10,7 +10,7 @@ import path from 'path';
 
 
 export default (req, store, context) => {
-   
+
     /* resolve path to root manually */
     /* todo to check if can utilize some node func, path.relative, or ? */
     let level = req.path;
@@ -40,7 +40,8 @@ export default (req, store, context) => {
                 <link href="${toRoot + 'bootstrap_bundle.min.css'}" rel='stylesheet'>
                 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
                 <link href="${toRoot + "/fonts/iconmonstr-iconic-font.min.css"}" rel="stylesheet">
-	<link href="${toRoot + "./fonts/open-iconic-bootstrap.css"}" rel="stylesheet">
+    <link href="${toRoot + "./fonts/open-iconic-bootstrap.css"}" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Bad+Script|Caveat|Kelly+Slab|Marck+Script|Press+Start+2P|Ruslan+Display|Stalinist+One|Vollkorn+SC&display=swap" rel="stylesheet">
     
     
                 <title>БЕЗ ГРАНИЦ - АНГЛИЙСКИЙ ЯЗЫК — МАЛЬТА — WITHOUT BORDERS</title>

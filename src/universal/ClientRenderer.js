@@ -24,5 +24,4 @@ export default () =>
         </BrowserRouter>
     </Provider>;
 
-console.log(1);
 
