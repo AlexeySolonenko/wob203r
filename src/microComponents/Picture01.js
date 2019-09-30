@@ -26,11 +26,11 @@ const Picture01 = ({ viewParams, pic, }) => {
 
     const sources = (
         <React.Fragment>
-            {pic.srcXs ? <source srcSet={pic.srcXs} media={"(min-width:" + mbXs + "px)"} /> : null}
-            {pic.srcSm ? <source srcSet={pic.srcSm} media={"(min-width:" + mbSm + "px)"} /> : null}
-            {pic.srcMd ? <source srcSet={pic.srcMd} media={"(min-width:" + mbMd + "px)"} /> : null}
-            {pic.srcLg ? <source srcSet={pic.srcLg} media={"(min-width:" + mbLg + "px)"} /> : null}
             {pic.srcXl ? <source srcSet={pic.srcXl} media={"(min-width:" + mbXl + "px)"} /> : null}
+            {pic.srcLg ? <source srcSet={pic.srcLg} media={"(min-width:" + mbLg + "px)"} /> : null}
+            {pic.srcMd ? <source srcSet={pic.srcMd} media={"(min-width:" + mbMd + "px)"} /> : null}
+            {pic.srcSm ? <source srcSet={pic.srcSm} media={"(min-width:" + mbSm + "px)"} /> : null}
+            {pic.srcXs ? <source srcSet={pic.srcXs} media={"(min-width:" + mbXs + "px)"} /> : null}
         </React.Fragment>
     );
 
@@ -46,6 +46,6 @@ const Picture01 = ({ viewParams, pic, }) => {
     );
 }
 
-const mapStateToProps = ({viewParams}) => ({viewParams});
+const mapStateToProps = ({ viewParams }) => ({ viewParams });
 
 export default connect(mapStateToProps)(Picture01);

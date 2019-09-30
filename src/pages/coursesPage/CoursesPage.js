@@ -2,8 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { NavLink, Route } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';
-import CoursesHomePage from './CoursesHomePage.js';
-import CoursesFlexiblePage from './CoursesFlexiblePage.js';
+import CoursesHomePage from './home/CoursesHomePage.js';
+import CoursesFlexiblePage from './shortTerm/CoursesFlexiblePage.js';
+import CoursesFlexibleGeneralPage from './shortTerm/CoursesFlexibleGeneralPage.js';
+import CoursesFamilyPage from './family/CoursesFamilyPage.js';
+import CoursesLongTermPage from './longTerm/CoursesLongTermPage.js';
+import CoursesBusinessPage from './business/CoursesBusinessPage.js';
+import CoursesTeachersPage from './teachers/CoursesTeachersPage.js';
 
 /**
  * @typedef import('../../typedefs/navTypeDefs.js').wob203rRoutes
@@ -23,6 +28,11 @@ const CoursesPage = (props) => {
         <React.Fragment>
             <Route path={courses.all.path} exact component={CoursesHomePage} />
             <Route path={courses.shortTerm.selfNav.path} exact component={CoursesFlexiblePage} />
+            <Route path={courses.shortTerm.flexi.path} exact component={CoursesFlexibleGeneralPage} />
+            <Route path={courses.longTerm.selfNav.path} exact component={CoursesLongTermPage} />
+            <Route path={courses.family.selfNav.path} exact component={CoursesFamilyPage} />
+            <Route path={courses.business.selfNav.path} exact component={CoursesBusinessPage} />
+            <Route path={courses.teachers.selfNav.path} exact component={CoursesTeachersPage} />
             <Container className='container-no-p-sm' >
                 <Row className='no-gutters-sm'>
                     <Col xs='12'><h3>COURSES PAGE</h3></Col>

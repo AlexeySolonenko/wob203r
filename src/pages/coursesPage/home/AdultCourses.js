@@ -1,17 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import CardWithListGroup from '../../microComponents/CardWithListGroup.js';
+import CardWithListGroup from '../../../microComponents/CardWithListGroup.js';
 /**
- * @typedef import('../../typedefs/navTypeDefs.js').wob203rRoutes
+ * @typedef import('../../../typedefs/navTypeDefs.js').wob203rRoutes
  */
 
 /**
  * 
- * @typedef import('../../typedefs/microComponents/Picture01.js').pictureProps
+ * @typedef import('../../../typedefs/microComponents/Picture01.js').pictureProps
  */
 
 /**
-* @typedef import('../../typedef/microComponents/ListGroup01WhitedProps.js').ListGroup01WhitedProps
+* @typedef import('../../../typedef/microComponents/ListGroup01WhitedProps.js').ListGroup01WhitedProps
 */
 
 /*
@@ -48,7 +48,7 @@ const AdultCourses = ({ allowedRoutes, viewParams }) => {
                 {
                     to: courses.business.selfNav.path,
                     intl: 'Прикладной английски по профессиям, бизнес.',
-                    title: courses.shortTerm.selfNav.intl,
+                    title: courses.business.selfNav.intl,
                 },
                 {
                     to: courses.longTerm.selfNav.path,

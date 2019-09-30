@@ -1,17 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import CardWithListGroup from '../../microComponents/CardWithListGroup.js';
+import CardWithListGroup from '../../../microComponents/CardWithListGroup.js';
 /**
- * @typedef import('../../typedefs/navTypeDefs.js').wob203rRoutes
+ * @typedef import('../../../typedefs/navTypeDefs.js').wob203rRoutes
  */
 
 /**
  * 
- * @typedef import('../../typedefs/view').pictureProps
+ * @typedef import('../../../typedefs/view').pictureProps
  */
 
 /**
-* @typedef import('../../typedef/microComponents/ListGroup01WhitedProps.js').ListGroup01WhitedProps
+* @typedef import('../../../typedef/microComponents/ListGroup01WhitedProps.js').ListGroup01WhitedProps
 */
 
 /*

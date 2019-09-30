@@ -20,6 +20,9 @@ import Picture01 from './Picture01.js';
  */
 const OverlayWithTitleAndText = ({ cardProps, pic }) => {
 
+    /**@todo to eliminate pic props completely */
+    if(!pic) pic = cardProps.pictureProps;
+    
     return (
         <Container className='container-no-p-sm'>
             <Row className='no-gutters-sm'>
