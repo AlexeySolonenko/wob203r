@@ -2,7 +2,7 @@ import sass from 'node-sass';
 import fs from 'fs';
 import path from 'path';
 import dirname from '../src/crutches/dirname.cjs';
-import asyncReadAndDeployFiles from './asyncReadAndDeployFiles.js';
+import asyncReadAndDeployFiles from './asyncReadAndDeployFiles.mjs/index.js';
 import client_dev_ftp_connect from '../confidential/client_dev_ftp_connect.js';
 import autoprefixer from 'autoprefixer';
 import postcss from 'postcss';

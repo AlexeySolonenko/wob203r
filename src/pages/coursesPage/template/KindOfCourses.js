@@ -44,7 +44,7 @@ const KindOfCourses = ({ pageData }) => {
             <div className='w-100 h-auto position-relative py-3'>
                 <div className='container-blue-bg'></div>
                 <Container>
-                    <Row><Col xs='12' style={{ fontSize: '1.25em' }}><b>СОСТАВ ПРОГРАММЫ</b></Col></Row>
+                    <Row><Col xs='12' style={{ fontSize: '1.25em' }} className='text-center'><b>СОСТАВ ПРОГРАММЫ</b></Col></Row>
                     <ProgramStructure programStruct={pageData.programStructure} />
                 </Container>
             </div>

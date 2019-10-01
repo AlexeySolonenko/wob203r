@@ -5,6 +5,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import CoursesHomePage from './home/CoursesHomePage.js';
 import CoursesFlexiblePage from './shortTerm/CoursesFlexiblePage.js';
 import CoursesFlexibleGeneralPage from './shortTerm/CoursesFlexibleGeneralPage.js';
+import CoursesFlexibleIntensivePage from './shortTerm/CoursesFlexibleIntensivePage.js';
 import CoursesFamilyPage from './family/CoursesFamilyPage.js';
 import CoursesLongTermPage from './longTerm/CoursesLongTermPage.js';
 import CoursesBusinessPage from './business/CoursesBusinessPage.js';
@@ -29,6 +30,7 @@ const CoursesPage = (props) => {
             <Route path={courses.all.path} exact component={CoursesHomePage} />
             <Route path={courses.shortTerm.selfNav.path} exact component={CoursesFlexiblePage} />
             <Route path={courses.shortTerm.flexi.path} exact component={CoursesFlexibleGeneralPage} />
+            <Route path={courses.shortTerm.intensive.path} exact component={CoursesFlexibleIntensivePage} />
             <Route path={courses.longTerm.selfNav.path} exact component={CoursesLongTermPage} />
             <Route path={courses.family.selfNav.path} exact component={CoursesFamilyPage} />
             <Route path={courses.business.selfNav.path} exact component={CoursesBusinessPage} />

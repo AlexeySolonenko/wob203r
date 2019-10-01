@@ -3,8 +3,9 @@ import path from 'path';
 import { createRequire } from 'module';
 const require = createRequire(filename);
 const Client = require('ftp');
+//const filename = require('../src/crutches/filename.js');
 import fs from 'fs';
-import client_dev_ftp_connect from '../confidential/client_dev_ftp_connect.js';
+import client_dev_ftp_connect from '../confidential/client_dev_ftp_connect.mjs';
 
 /* todo to rework with promisify OR async  */
 const asyncReadFiles = (filenames) => {

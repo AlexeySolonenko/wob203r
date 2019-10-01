@@ -27,13 +27,13 @@ const CoursesFlexibleGeneralPage = ({ allowedRoutes }) => {
             pictureProps: {
                 srcXs: '/img/courses/2019q3-courses-flexi-001--xs.png',
                 srcSm: '/img/courses/2019q3-courses-flexi-001--sm.png',
-                alt: 'Group of students in a class. A teacher is showing to students two cartoon cut hand-drawn smiley faces.'
+                alt: 'Russian rising star cameraman in a tuxedo in a dance hug with a young slim lady in red. Both on a red velvet carpet in Cannes on a cinema international event.'
             },
-            title: 'ОБЩИЕ АДАПТИВНЫЕ ПРОГРАММЫ',
-            text: 'Учебный план, подстроенный под Ваши нужды и график.'
+            title: "КРАТКОСРОЧНЫЕБИЗНЕС КУРСЫ",
+            text: 'Бизнес английский общего профиля, и специализированные программы.'
         },
-        underHeroCardGreeting: 'АНГЛИЙСКИЙ КАК ДОПОЛНЕНИЕ К ВАШЕЙ ПОЕЗДКЕ',
-        description: ' ываваываыфвафывафываф ываваываыфвафывафываф ываваываыфвафывафываф ываваываыфвафывафываф ываваываыфвафывафываф ываваываыфвафывафываф ываваываыфвафывафываф ываваываыфвафывафываф ываваываыфвафывафываф ываваываыфвафывафываф ываваываыфвафывафываф ываваываыфвафывафываф ываваываыфвафывафываф ',
+        underHeroCardGreeting: 'ИНВЕСТИЦИЯ В РАЗВИТИЕ И ЭФФЕКТИВНОСТЬ ТРУДА',
+        description: ' Английский для бизнеса то, это то это то это то это   это то это то это то это  это то это то это то это  это то это то это то это  это то это то это то это  это то это то это то это  это то это то это то это  это то это то это то это  это то это то это то это  это то это то это то это  это то это то это то это  это то это то это то это ',
         factSheet: {
             courseLength: "1-4 недель",
             entryLevel: "Любой",

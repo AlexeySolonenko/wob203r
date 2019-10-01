@@ -20,7 +20,7 @@ const FactSheetBlock = ({ factSheetProps }) => {
 
     const topLineText = factSheetProps.headerText || 'ГЛАВНОЕ О КУРСЕ'
 
-    const headerClass = ['text-uppercase', 'text-secondary'];
+    const headerClass = ['text-uppercase', 'text-primary'];
 
 
     const simpleLine = (header, text) => {
@@ -63,7 +63,8 @@ const FactSheetBlock = ({ factSheetProps }) => {
                     factSheetProps.courseStructure.map((i) => {
                         return (
                             <Col xs='12'
-                            ><span className="oi text-secondary px-2 oi-check "></span><span>{i}</span></Col>
+                            ><span
+                                className="oi text-primary px-2 oi-check "></span><span>{i}</span></Col>
                         );
                     })
                 }
@@ -91,7 +92,9 @@ const FactSheetBlock = ({ factSheetProps }) => {
 
     return (
         <Row className='shadow bg-teal02'>
-            <Col xs='12' style={{fontSize:'1.25em'}}>{topLineText}</Col>
+            <Col xs='12'
+                style={{ fontSize: '1.25em' }}
+            ><b>{topLineText}</b></Col>
             {courseLength}
             {entryLevel}
             {minAge}

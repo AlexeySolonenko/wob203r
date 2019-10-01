@@ -1,7 +1,7 @@
 {
   "name": "wob202r",
   "version": "0.1.0",
-  "type": "module",
+
   "private": true,
   "scripts": {
     "dev:server": "nodemon --watch public --exec \"node public/index.js\"",
@@ -9,6 +9,7 @@
     "dev:build-client": "webpack --config webpack.dev.client.js --watch",
     "dev": "npm-run-all --parallel dev:*"
   },
+  "repository": "src",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",

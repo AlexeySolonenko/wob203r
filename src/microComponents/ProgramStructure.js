@@ -14,12 +14,11 @@ import { NavLink } from 'react-router-dom';
  */
 const ProgramStructure = ({ programStruct }) => {
 
-
     /**
      * @function
      * @param {ProgramStructureItemProps} i 
      */
-    const buildItem = (i) => {
+    const buildItem = (i, idx, all) => {
 
         let header = null;
         const textStyle = { style: { fontSize: '0.8em' } };
@@ -41,7 +40,7 @@ const ProgramStructure = ({ programStruct }) => {
                     <Button
                         as={NavLink}
                         to={i.readMore.path}
-                        // className='ml-auto'
+                    // className='ml-auto'
                     >{i.readMore.intl}</Button>
                 </Col>
             );
@@ -73,6 +72,15 @@ const ProgramStructure = ({ programStruct }) => {
             typeBar = (<Col xs='12' className={(clr + ' text-center')}>{txt}</Col>);
         }
 
+        const joint = (idx < (all.length-1)) ? (
+            <Col xs='12' sm='1'
+                className='py-xs-3 text-primary text-center py-sm-0 my-auto'
+                style={{ fontSize: '2.5em' }}
+            >
+                <b>{programStruct.joinSymbol || "+"}</b>
+            </Col>
+        ) : null;
+
         return (
             <React.Fragment>
                 <Col xs='12' sm='3'>
@@ -85,16 +93,15 @@ const ProgramStructure = ({ programStruct }) => {
                         </Card.Body>
                         {((price || readMore || typeBar) ?
                             <Card.Footer>
-                                <Row>
-                                    {price}{readMore}{typeBar}
-                                </Row>
+                                {price}{readMore}{typeBar}
                             </Card.Footer>
                             : null)}
                     </Card>
                 </Col>
-                <Col xs='12' sm='1' className='py-xs-3 text-primary text-center py-sm-0 my-auto' style={{ fontSize: '2.5em' }}>
-                    <b>{programStruct.joinSymbol || "+"}</b>
-                </Col>
+                {joint}
+                <React.Fragment>
+
+                </React.Fragment>
             </React.Fragment>
         );
     };
