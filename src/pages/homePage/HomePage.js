@@ -4,12 +4,27 @@ import { NavLink } from 'react-router-dom';
 import { fetchPaths } from '../../actions/fetchPaths.js';
 import { connect } from 'react-redux';
 import Hero from './Hero.js';
+import fs from 'fs';
 import WhyUs from './WhyUs.js';
 import CoursesThumbs from './CoursesThumbs.js';
 import HeroFriendsAllLg from './HeroFriendsAllLg.js';
 import HeroFriendsAllXsMd from './HeroFriendsAllXsMd.js';
+import winston from 'winston';
+
+const logger = winston.createLogger({
+    level:'info',
+    format:winston.format.simple(),
+    defaultMeta: { service: 'user-service' },
+    transports: [
+        new winston.transports.File({filename:'test_log.log'})
+    ]   
+});
 
 const HomePage = (props) => {
+
+    logger.info('test from home page 2235  ');
+
+    console.log('Node version is: ' + process.version);
 
     if (props.location.pathname === '/') {
         props.history.replace('/home');

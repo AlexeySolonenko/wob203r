@@ -1,7 +1,9 @@
 /**
 * @typedef import('../navTypeDefs.js").routeItem
 */
-
+/**
+ * @todo to import react typedefs for React.Element
+ */
 /**
  * @typedef {Object} ProgramStructureItemProps
  * @property {string=} heroText

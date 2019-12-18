@@ -4,6 +4,7 @@ import OverlayWithTitleAndText from '../../../microComponents/OverlayWithTitleAn
 import SubTopicCard from '../../../microComponents/SubTopicCard.js';
 import IconsAndTextBlock01 from '../../../microComponents/IconsAndTextBlock01.js';
 import ContactAnAdvisor01 from '../../../microComponents/ContactAnAdvisor01.js';
+import ScrollToTopOnMount from '../../../microComponents/ScrollToTopOnMount.js';
 
 /**
  * @typedef import("../../../typdefs/pages/coursesPage/tempalte/GroupOfCourses.js").GroupOfCoursesProps
@@ -17,8 +18,22 @@ import ContactAnAdvisor01 from '../../../microComponents/ContactAnAdvisor01.js';
  */
 const CoursesBusinessPage = ({ modelData }) => {
 
+    let triples = 0;
+    let sortedCards = [[]];
+    modelData.subTopicCards.forEach( (p, idx) => {
+        if(idx % 3 === 0) {
+            triples++;
+            sortedCards[triples] = [];
+        }
+        // sortedCards[triples].push(<Col xs='12' md='4'><SubTopicCard key={p.title} cardProps={p} /></Col>);
+        sortedCards[triples].push(<SubTopicCard key={p.title} cardProps={p} />);
+        return;
+    });
+
+
     return (
         <React.Fragment>
+            <ScrollToTopOnMount />
             <OverlayWithTitleAndText cardProps={modelData.heroCard} />
             <div className="my-1"></div>
             <Container>
@@ -33,9 +48,8 @@ const CoursesBusinessPage = ({ modelData }) => {
             <div className='w-100 h-auto position-relative py-3' >
                 <div className='container-blue-bg'></div>
                 <Container>
-                    <CardDeck>
-                        {modelData.subTopicCards.map((p) => (<SubTopicCard key={p.title} cardProps={p} />))}
-                    </CardDeck>
+                    {sortedCards.map((cards) => (<CardDeck className=' my-2'>{cards}</CardDeck>))}
+                    {/* <Row>{modelData.subTopicCards.map((c)=>(<Col xs='12' md='4'><SubTopicCard key={c.title} cardProps={c} /></Col>))}</Row> */}
                 </Container>
             </div>
             <div className='my-1'></div>

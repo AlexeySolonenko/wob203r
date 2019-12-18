@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 import GroupOfCourses from '../template/GroupOfCourses.js';
 
 /**
+* @typedef import("../../../typedefs/navTypeDefs.js").wob203rRoutes
+*/
+
+/**
  * @typedef import('../template/GroupOfCourses.js').GroupOfCoursesProps
  */
 
@@ -31,9 +35,17 @@ const CoursesFamilyPage = ({ allowedRoutes }) => {
         subTopicCards: [
             {
                 pictureProps: {
-                    srcXs: '/img/courses/2019q3-courses-family-001--xs.png'
+                    srcXs: '/img/courses/2019q3-courses-family-teenagers-001--xs.png'
                 },
-                readMoreRoute: family.selfNav,
+                readMoreRoute: family.teenagers,
+                title: 'КУРСЫ ДЛЯ ПОДРОСТКОВ С ПРОЖИВАНИЕМ',
+                text: 'Погружение в языковую среду. Уникальная возможность для подростков освивать язык в учебное, и внешкольное время.',
+            },
+            {
+                pictureProps: {
+                    srcXs: '/img/courses/2019q3-courses-family-summer-camp-001--xs.png'
+                },
+                readMoreRoute: family.summerCamp,
                 title: 'ЛЕТНИЙ ЛАГЕРЬ',
                 text: 'Погружение в языковую среду. Уникальная возможность для подростков освивать язык в учебное, и внешкольное время.',
             },
@@ -41,15 +53,15 @@ const CoursesFamilyPage = ({ allowedRoutes }) => {
                 pictureProps: {
                     srcXs: '/img/courses/2019q3-courses-family-001--xs.png'
                 },
-                readMoreRoute: family.selfNav,
-                title: 'КУРСЫ ДЛЯ САМЫХ МАЛЕНЬКИХ',
+                readMoreRoute: family.kids,
+                title: 'ДЛЯ САМЫХ МАЛЕНЬКИХ',
                 text: 'Программы для детей от 3 лет. Детские сады для малышей для родителей, обучающихся на долгосрочных программах.',
             },
             {
                 pictureProps: {
                     srcXs: '/img/courses/2019q3-courses-family-001--xs.png'
                 },
-                readMoreRoute: family.selfNav,
+                readMoreRoute: family.fullFamily,
                 title: 'КОМПЛЕКСНЫЕ ПРОГРАМЫ ДЛЯ ДЕТЕЙ И РОДИТЕЛЕЙ',
                 text: 'Дети и родители обучаются в соседних классах в одинаковое время. Гибкость графика.',
             },

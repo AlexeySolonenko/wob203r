@@ -1,7 +1,10 @@
 const path = require('path');
 
-console.log(path.resolve(__dirname, '/node_modules/'));
+//console.log(path.resolve(__dirname, '/node_modules/'));
 module.exports = {
+    node : {
+        fs: 'empty'
+    },
     /* Tell webpack to run babel on every file it runs through */
     module: {
         rules: [

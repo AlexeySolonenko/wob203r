@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Col, Row } from 'react-bootstrap';
 
 /**
  * 
@@ -14,50 +15,68 @@ import { connect } from 'react-redux';
  */
 const BreadCrumbs = ({ tree, location }) => {
 
-    const findChildInRoutes = (p) => {
-        if(!p.hasOwnPropertyKey('selfNav')) return null;
-        let items= Object.assign({},p);
+    console.log('bread crumbs props', tree, location);
+    
+    const findChildInRoutes = (r) => {
+        if (!r.hasOwnProperty('selfNav')) return null;
+
+        /** 
+         * @param {routeItem} val 
+         */
+        const finder = (val) => {
+            let route= null;
+            if(val.hasOwnProperty('selfNav')) route = val.selfNav;
+            else route = val;
+            console.log('finder route',route);
+            return (location.pathname.indexOf(route.path) > -1);
+        };
+
+        let items = Object.assign({}, r);
         delete items.selfNav;
-        let seekable= null;
-        seekable = Object.values(items).reduce((null,val,idx,all) => {
-            
-            return();
-        });
+        delete items.all;
+        let seekable = Object.values(items).find(finder, null);
+        return (seekable === undefined) ? null : seekable;
     };
 
     /**
      * 
      * @param {routeItem} p 
-     * @param {number} idx 
-     * @param {Array<routeItem>} all 
+     * @param {boolean} subPath
      */
-    const buildPaths = (p, idx, all) => {
-        console.log('breadc single items props', p, idx, all);
-        const itemToBuild = p.hasOwnPropertyKey('selfNav') ? p.selfNav : p;
+    const buildPaths = (p, subPath) => {
+        console.log('breadc single items props', p);
+        const itemToBuild = p.hasOwnProperty('selfNav') ? p.selfNav : p;
+
         const deeperThanCurrentView =
-            (p.path.indexOf(location.pathname) > -1)
+            (itemToBuild.path.indexOf(location.pathname) > -1)
             &&
-            (p.path !== location.pathname);
+            (itemToBuild.path !== location.pathname);
 
-        const subP = '';
-
+        let subP = findChildInRoutes(p);
+        if (subP) subP = buildPaths(subP, true);
+        const divider = subPath ? (<Col xs='auto'>/</Col>) : null; 
         return (deeperThanCurrentView ? null : (
-            <Col
-                xs='auto'
-                as={NavLink}
-                to={itemToBuild.path}
-            >{itemToBuild.intl}
-            </Col>
+            <React.Fragment>
+                {divider}
+                <Col
+                    xs='auto'
+                    as={NavLink}
+                    to={itemToBuild.path}
+                >{itemToBuild.intl}
+                </Col>
+                {subP}
+            </React.Fragment>
         )
         );
     };
 
     return (
-        <Row>
-            <Col xs='auto'>back to do</Col>
+        <Row className='form-row font-weight-bold '>
+            {/* <Col xs='auto'>back to do</Col> */}
+            {buildPaths(tree)}
         </Row>
 
     );
-
-
 };
+
+export default BreadCrumbs;

@@ -10,7 +10,6 @@ import path from 'path';
 
 
 export default (req, store, context) => {
-
     /* resolve path to root manually */
     /* todo to check if can utilize some node func, path.relative, or ? */
     let level = req.path;

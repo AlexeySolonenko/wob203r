@@ -91,7 +91,7 @@ const FactSheetBlock = ({ factSheetProps }) => {
         ) : null;
 
     return (
-        <Row className='shadow bg-teal02'>
+        <Row className=''>
             <Col xs='12'
                 style={{ fontSize: '1.25em' }}
             ><b>{topLineText}</b></Col>

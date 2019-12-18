@@ -1,2 +1,11 @@
+FIXME
+- card decks/groups multiple rows. 4th card width broken vs width of the cards above. Col class to be removed from the card deck, this might be a reason
+- card columns?
+
+
+TODO
+start branching
+
+
 photo tours how will it be 
 make label photo by: 

@@ -43,7 +43,7 @@ const AdultCourses = ({ allowedRoutes, viewParams }) => {
                 {
                     to: courses.shortTerm.selfNav.path,
                     intl: 'Краткосрочные гибкие программы для любых нужд',
-                    title: courses.shortTerm.flexi.intl,
+                    title: courses.shortTerm.selfNav.intl,
                 },
                 {
                     to: courses.business.selfNav.path,

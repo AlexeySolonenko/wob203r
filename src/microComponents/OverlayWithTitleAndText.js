@@ -33,7 +33,7 @@ const OverlayWithTitleAndText = ({ cardProps, pic }) => {
                             <Row className='no-gutters-sm h-100'>
                             <div className='overlay-with-title-and-text-gradient w-100 h-100'></div>
                                 <Col className='align-self-center text-white font-weight-bold text-center'>
-                                    <h3 className='text-white font-weight-bold'>{cardProps.title}</h3>
+                                    <h2 className='text-white font-weight-bold'>{cardProps.title}</h2>
                                     <div>{cardProps.text}</div>
                                 </Col>
                             </Row>

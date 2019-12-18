@@ -5,6 +5,7 @@ import FactSheetBlock from '../../../microComponents/FactSheetBlock.js';
 import OverlayWithTitleAndText from '../../../microComponents/OverlayWithTitleAndText.js';
 import ContanctAnAdvisor from '../../../microComponents/ContactAnAdvisor01.js';
 import ProgramStructure from '../../../microComponents/ProgramStructure.js';
+import ScrollToTopOnMount from '../../../microComponents/ScrollToTopOnMount.js';
 
 /**
  * @typedef import('../../../typedefs/pages/coursesPage/template/KindOfCourses.js').KindOfCoursesProps
@@ -20,19 +21,24 @@ const KindOfCourses = ({ pageData }) => {
 
     return (
         <React.Fragment>
+            <ScrollToTopOnMount />
             <OverlayWithTitleAndText cardProps={pageData.heroCard} />
             <Container>
                 <Row>
                     <Col className='text-center'>
-                        <p className='font-weight-bold' style={{ fontSize: '1.5em' }}>{pageData.underHeroCardGreeting}</p>
+                        <h3 className='font-weight-bold my-3'>{pageData.underHeroCardGreeting}</h3>
                     </Col>
                 </Row>
                 <Row>
                     <Col xs='12' md='8'>{pageData.description}</Col>
                     <Col xs='12' md='4'>
-                        <FactSheetBlock factSheetProps={pageData.factSheet} />
+                        <Card className='shadow bg-teal02'>
+                            <Card.Body>
+                                <FactSheetBlock factSheetProps={pageData.factSheet} />
+                            </Card.Body>
+                        </Card>
                     </Col>
-                    <Col xs='12'>
+                    <Col xs='12 mb-3'>
                         <Row>
                             <Col xs='auto' >
                                 <ContanctAnAdvisor />
@@ -44,7 +50,7 @@ const KindOfCourses = ({ pageData }) => {
             <div className='w-100 h-auto position-relative py-3'>
                 <div className='container-blue-bg'></div>
                 <Container>
-                    <Row><Col xs='12' style={{ fontSize: '1.25em' }} className='text-center'><b>СОСТАВ ПРОГРАММЫ</b></Col></Row>
+                    <Row><Col xs='12' style={{ fontSize: '1.25em' }} className='text-left'><b>СОСТАВ ПРОГРАММЫ</b></Col></Row>
                     <ProgramStructure programStruct={pageData.programStructure} />
                 </Container>
             </div>

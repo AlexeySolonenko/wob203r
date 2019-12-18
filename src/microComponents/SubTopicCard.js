@@ -66,17 +66,19 @@ const SubTopicCard = ({ cardProps, pic }) => {
                     </Card>
                 </Col>
             </Row>
-            <Card as={NavLink} to={cardProps.readMoreRoute.path} className="d-none d-sm-flex col-sm-4 " >
-                <Picture01 pic={pic} />
-                <Card.Body>
-                    <Card.Title>{cardProps.title}</Card.Title>
-                    <Card.Text style={{ color: 'black' }}>{cardProps.text}</Card.Text>
-                </Card.Body>
-                <Card.Footer className="text-right bg-white">
-                    {/* <Button as={NavLink} to={cardProps.readMoreRoute.path} className='bg-transparent rounded-0 button-transparent border-0 font-weight-bold text-primary' ><u>ПОДРОБНЕЕ</u></Button> */}
-                    <Button className='bg-transparent rounded-0 button-transparent border-0 font-weight-bold text-primary' ><u>ПОДРОБНЕЕ</u></Button>
-                </Card.Footer>
-            </Card>
+            <Col xs='4' className='d-none d-sm-flex'>
+                <Card as={NavLink} to={cardProps.readMoreRoute.path} className="d-none d-sm-flex  " >
+                    <Picture01 pic={pic} />
+                    <Card.Body>
+                        <Card.Title>{cardProps.title}</Card.Title>
+                        <Card.Text style={{ color: 'black' }}>{cardProps.text}</Card.Text>
+                    </Card.Body>
+                    <Card.Footer className="text-right bg-white">
+                        {/* <Button as={NavLink} to={cardProps.readMoreRoute.path} className='bg-transparent rounded-0 button-transparent border-0 font-weight-bold text-primary' ><u>ПОДРОБНЕЕ</u></Button> */}
+                        <Button className='bg-transparent rounded-0 button-transparent border-0 font-weight-bold text-primary' ><u>ПОДРОБНЕЕ</u></Button>
+                    </Card.Footer>
+                </Card>
+            </Col>
         </React.Fragment>
     );
 };
