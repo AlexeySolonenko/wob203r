@@ -1,13 +1,13 @@
 //import 'babel-polyfill';
 import express from 'express';
-import renderer from './src/universal/renderer.js';
-import createStore from './src/universal/createStore.js';
+import renderer from './client/universal/renderer.js';
+import createStore from './client/universal/createStore.js';
 import proxy from 'express-http-proxy';
 import reatRouterConfig from 'react-router-config';
 const matchRoutes = reatRouterConfig.matchRoutes;
-import Routes from './src/routes/Routes.js';
+import Routes from './client/routes/Routes.js';
 import { createRequire } from 'module';
-import dirname from './src/crutches/dirname.cjs';
+import dirname from './client/crutches/dirname.cjs';
 
 //import webapp_config from './webapp_config.js';
 

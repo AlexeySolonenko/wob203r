@@ -1,4 +1,4 @@
-import filename from '../src/crutches/filename.cjs';
+import filename from '../client/crutches/filename.cjs';
 import path from 'path';
 import { createRequire } from 'module';
 const require = createRequire(filename);

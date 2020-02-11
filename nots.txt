@@ -9,3 +9,17 @@ start branching
 
 photo tours how will it be 
 make label photo by: 
+
+/**
+ * @typedef import('../../typedefs/navTypeDefs.js').wob203rRoutes
+ */
+ 
+
+ waveshaper
+ gunship
+ after dark
+ all day heat
+ bloodstarved beast
+ unlimited
+ my faust
+ 

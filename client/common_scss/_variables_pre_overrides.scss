@@ -1,0 +1,57 @@
+$body-bg: #ffffffde;
+$body-color: rgb(0, 0, 0);
+
+
+$container-max-widths: (
+ sm: 100%,
+ md: 100%,
+ lg: 95%,
+ xl: 90%
+) ;
+
+$gray-100: #e8f1fa !default;
+$gray-200: #dae5f0 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #c1d3e6 !default;
+$gray-500: #91adc9 !default;
+//$gray-600: #475c73 !default;
+$gray-600: #1C55DA !default;
+$gray-700: #495057 !default;
+$gray-800: #364859 !default;
+$gray-900: #282b42 !default;
+
+$primary:       #BB0420;
+$secondary:     #528fc5;
+$success:       #28a745;
+$info:          #1C55DA;
+$warning:       #20E6F5;
+$danger:        #FF0000;
+$light:         $gray-400;
+$dark:          #253E5F;
+//$gray-600:  #1C55DA;
+
+// $blue:    #336CA8 !default;
+// $indigo:  #6610f2 !default;
+// $purple:  #6f42c1 !default;
+// $pink:    #e83e8c !default;
+//$red:     #cc001f;
+// $orange:  #fd7e14 !default;
+// $yellow:  #ffc107 !default;
+// $green:   #28a745 !default;
+// $teal:    #20c997 !default;
+// $cyan:    #17a2b8 !default;
+
+$headings-color:           $primary;
+
+$red:     #cc001f;
+//$green: #808000;
+//$light-gray: #bfc3c7;
+
+//$link-color: $primary;
+//$navbar-light-color:$red;
+/* $nav-tabs-link-active-color:        colors('gray');*/
+//$navbar-light-color: $red;
+
+$border-wide: 5px;
+$border-timeline-rad: 25%;
+$timeline-hor-turn-heigth: 5vw;

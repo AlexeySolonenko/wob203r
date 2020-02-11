@@ -1,0 +1,238 @@
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+
+
+    
+
+ @import "./bootstrap431/_functions.scss";
+ @import "./_variables_pre_overrides.scss";
+ @import "./bootstrap431/_variables.scss";
+
+ // custom variabbles overrides
+@import "./_variables_overrides.scss";
+@import "./_variables_extra.scss";
+
+ @import "./bootstrap431/_mixins.scss";
+
+ // custom mixins
+ @import "./_custom_mixins.scss";
+
+ //@import "./bootstrap431/mixins/breakpoints";
+ @import "./bootstrap431/_root.scss";
+ @import "./bootstrap431/_reboot.scss";
+ @import "./bootstrap431/_type.scss";
+ @import "./bootstrap431/_images.scss";
+ @import "./bootstrap431/_code.scss";
+ @import "./bootstrap431/_grid.scss";
+ @import "./bootstrap431/_tables.scss";
+ @import "./bootstrap431/_forms.scss";
+ @import "./bootstrap431/_buttons.scss";
+ @import "./bootstrap431/_transitions.scss";
+ @import "./bootstrap431/_dropdown.scss";
+ @import "./bootstrap431/_button-group.scss";
+ @import "./bootstrap431/_input-group.scss";
+ @import "./bootstrap431/_custom-forms.scss";
+ @import "./bootstrap431/_nav.scss";
+ @import "./bootstrap431/_navbar.scss";
+ @import "./bootstrap431/_card.scss";
+ @import "./bootstrap431/_breadcrumb.scss";
+ @import "./bootstrap431/_pagination.scss";
+ @import "./bootstrap431/_badge.scss";
+ @import "./bootstrap431/_jumbotron.scss";
+ @import "./bootstrap431/_alert.scss";
+ @import "./bootstrap431/_progress.scss";
+ @import "./bootstrap431/_media.scss";
+ @import "./bootstrap431/_list-group.scss";
+ @import "./bootstrap431/_close.scss";
+ @import "./bootstrap431/_toasts.scss";
+ @import "./bootstrap431/_modal.scss";
+ @import "./bootstrap431/_tooltip.scss";
+ @import "./bootstrap431/_popover.scss";
+ @import "./bootstrap431/_carousel.scss";
+ @import "./bootstrap431/_spinners.scss";
+ @import "./bootstrap431/_utilities.scss";
+ @import "./bootstrap431/_print.scss";
+
+ // custom styles
+ @import "./position.scss";
+ @import "./single_use_classes.scss";
+
+ 
+
+
+
+ @include media-breakpoint-down(sm) {
+  .container.container-no-p-sm {
+    padding-right:0px;
+    padding-left:0px;
+  }
+}
+ .card-columns {
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(sm) {
+    column-count: 2;
+  }
+}
+
+
+.border-wide {
+  border-width: $border-wide !important;
+}
+
+
+.border-time-line-rounded-br {
+  border-radius: 0% 0% $border-timeline-rad 0%;
+  height:$timeline-hor-turn-heigth;
+ 
+}
+
+.border-time-line-rounded-tl {
+  border-radius: $border-timeline-rad 0% 0% 0%;
+  height:$timeline-hor-turn-heigth;
+  margin-top:-$border-wide;
+}
+
+.border-time-line-rounded-tr {
+  border-radius: 0% $border-timeline-rad 0% 0%;
+  height:$timeline-hor-turn-heigth;
+  margin-top:-$border-wide;
+}
+
+.border-time-line-rounded-bl {
+  border-radius: 0% 0% 0% $border-timeline-rad;
+  height:$timeline-hor-turn-heigth;
+}
+
+.border-time-line-shifted-up {
+  margin-top:-$border-wide;
+}
+
+
+
+.line-arrow {
+  position: absolute;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 12px; /*set the size for arrow*/
+  width: 4em;
+  height: 4em;
+  margin-top: -2em;
+  top: 50%;
+}
+
+.line-arrow.left {
+  border-top: 1px solid #a9a9a9;
+  border-left: 1px solid #a9a9a9;
+  transform: rotate(-54deg) skew(-20deg);
+  left: 20px;
+}
+
+.line-arrow.right {
+  border-top: 1px solid #a9a9a9;
+  border-right: 1px solid #a9a9a9;
+  transform: rotate(54deg) skew(20deg);
+  right: 20px;
+}
+
+.line-arrow:active,
+.line-arrow.active {
+  border-width: 2px;
+}
+
+.square {
+top: auto;
+bottom: 10px;
+}
+
+.square.left {
+transform: rotate(-45deg);
+}
+
+.square.right {
+transform: rotate(45deg);
+}
+
+.fixed-height-85{
+  height:85vh;
+}
+
+.fixed-height-65{
+    height:65vh !important;  
+}
+
+.fixed-height-15{
+  height:15vh !important;  
+}
+.fixed-height-25{
+  height:25vh !important;  
+}
+.fixed-height-70p{
+  height:70% !important;  
+}
+
+.cropped-img {
+  object-fit: none; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  width: 100%;
+  max-height: 250px;
+  margin-bottom: 1rem;
+}
+
+.overflow-x-hidden {
+  overflow-x:hidden !important;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.no-gutters-sm {
+    @include media-breakpoint-down(sm) {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+.border-sm-x-0 {
+  @include media-breakpoint-down(sm) {
+    border-right: 0 !important;
+    border-left:0 !important;
+  }
+}
+
+.rounded-sm-0 {
+  @include media-breakpoint-down(sm) {
+    border-radius: 0 !important;
+  }
+}
+
+.carousel-card-img-cropped-01 {
+    width:100%;
+    background-position:center;
+    background-size:cover;
+}

@@ -28,6 +28,10 @@ const config = {
                         if (stdout) process.stdout.write(stdout);
                         if (stderr) process.stdout.write(stderr);
                     });
+                    exec('title CLIENT APP', (err, stdout, stderr) => {
+                        if (stdout) process.stdout.write(stdout);
+                        if (stderr) process.stdout.write(stderr);
+                    });
                 });
             }
         },

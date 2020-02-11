@@ -1,4 +1,4 @@
-import filename from './src/crutches/filename.cjs';
+import filename from './client/crutches/filename.cjs';
 import asyncReadAndDeployFiles from './util/asyncReadAndDeployFiles.mjs';
 import client_dev_ftp_connect from './confidential/client_dev_ftp_connect.mjs';
 import { createRequire } from 'module';

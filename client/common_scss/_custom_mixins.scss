@@ -1,0 +1,12 @@
+
+  @each $prop, $abbrev in (width: wvh, height: hvh) {
+    @each $size, $length in $sizesVH {
+      .#{$abbrev}-#{$size} { #{$prop}: $length !important; }
+    }
+  }
+
+  @each $prop, $abbrev in (width: wvw, height: hvw) {
+    @each $size, $length in $sizesVW {
+      .#{$abbrev}-#{$size} { #{$prop}: $length !important; }
+    }
+  }
