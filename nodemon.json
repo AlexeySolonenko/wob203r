@@ -1,0 +1,18 @@
+{
+    "ignore":[
+        "api",
+        "arc",
+        "client",
+        "confidential",
+        "config",
+        "dev_tools",
+        "devops",
+        "node_modules",
+        "secrets",
+        "shared_auth",
+        "shared_crutches",
+        "tmp",
+        "util"
+    ],
+    "delay": "2000"
+}

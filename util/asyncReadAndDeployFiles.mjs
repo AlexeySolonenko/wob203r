@@ -1,3 +1,4 @@
+import { asyncReadJson } from '../shared_util/filesystem/asyncReadJson.mjs';
 import filename from '../client/crutches/filename.cjs';
 import path from 'path';
 import { createRequire } from 'module';
@@ -5,7 +6,6 @@ const require = createRequire(filename);
 const Client = require('ftp');
 //const filename = require('../src/crutches/filename.js');
 import fs from 'fs';
-import client_dev_ftp_connect from '../confidential/client_dev_ftp_connect.mjs';
 
 /* todo to rework with promisify OR async  */
 const asyncReadFiles = (filenames) => {
@@ -24,8 +24,10 @@ const asyncReadFiles = (filenames) => {
     return promises;
 };
 /* todo to rework with promisify OR async */
-const openConnection = (connectConfig) => new Promise((resolve, reject) => {
-    if(!connectConfig) connectConfig = client_dev_ftp_connect;
+const openConnection = (connectConfig) => new Promise( async (resolve, reject) => {
+    if(!connectConfig) {
+        connectConfig = await asyncReadJson('../secrets/client_def_ftp_connect.json');
+    }
     var c = new Client();
     c.on('ready', resolve.bind(null, c),reject);
     c.connect(connectConfig);
@@ -59,7 +61,7 @@ const asyncReadAndDeployFiles = async (files,connectConfig) => {
     }
 };
 
-const files = ['./public/test1.txt','./test2.txt'];
+//const files = ['./public/test1.txt','./test2.txt'];
 //asyncReadAndDeployFiles(files);
 
 export default asyncReadAndDeployFiles;

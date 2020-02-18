@@ -4,7 +4,19 @@ FIXME
 
 
 TODO
-start branching
+- start branching
+- move code into monorepo
+- make login and logout funct-lity
+- start making a generic config file to be located and duplicated both, on remote and on local
+- test import of deploy functions instead of running a file
+- moive api and web site to https domains on local
+- moive api and web site to https domains on remote
+- setup prod, perhaps, using CI/CD with manual jobs running
+
+
+- clean-up code and gradually move common functionality into relevant shared folders
+
+- ensure an app loads even if the server is down
 
 
 photo tours how will it be 

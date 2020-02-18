@@ -1,9 +1,9 @@
+import { asyncReadJson } from '../shared_util/filesystem/asyncReadJson.mjs';
 import sass from 'node-sass';
 import fs from 'fs';
 import path from 'path';
 import dirname from '../client/crutches/dirname.cjs';
 import asyncReadAndDeployFiles from './asyncReadAndDeployFiles.mjs';
-import client_dev_ftp_connect from '../confidential/client_dev_ftp_connect.mjs';
 import autoprefixer from 'autoprefixer';
 import postcss from 'postcss';
 
@@ -35,7 +35,10 @@ const config = {
 //     }
 // }
 
-const deploy = asyncReadAndDeployFiles.bind(null, ['./public/bootstrap_bundle.min.css'], client_dev_ftp_connect);
+const deploy = async() => {
+    const clientAppFtpConfig = await asyncReadJson('../secrets/client_def_ftp_connect.json');
+    asyncReadAndDeployFiles.bind(null, ['./public/bootstrap_bundle.min.css'], clientAppFtpConfig);
+}
 const cb = async function (error, result) {
     if (!error) {
         console.log('start post process');

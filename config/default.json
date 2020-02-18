@@ -1,5 +1,8 @@
 {
     "appConfig": {
-        "apiUrl": "http://localhost:3001/"
+        "appUrl": "https://localhost:3000",
+        "apiUrl": "https://localhost:3001/",
+        "env": "test_local",
+        "mode": "development"
     }
 }

@@ -1,5 +1,10 @@
+
+
 # security
-./confidential
+/confidential
+/config
+/secrets
+/tls_self_keys
 
 # Built application files
 *.apk
