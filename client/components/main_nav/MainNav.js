@@ -27,7 +27,7 @@ class MainNav extends React.Component {
         n = this.props.paths;
         
 
-        console.log('main nav prps', this.props);
+        //console.log('main nav prps', this.props);
         const authButton = this.props.auth ? (
             <a href="/api/logout">Logout</a>
         ) : (

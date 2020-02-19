@@ -4,8 +4,7 @@ FIXME
 
 
 TODO
-- start branching
-- move code into monorepo
+- switch to https
 - make login and logout funct-lity
 - start making a generic config file to be located and duplicated both, on remote and on local
 - test import of deploy functions instead of running a file

@@ -7,6 +7,7 @@ import { fetchRoutes } from './actions/fetchRoutes.js';
 import { fetchViewParams } from './actions/fetchViewParams.js';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
+import { ServiceUnavailable } from './pages/503ServiceUn/ServiceUnavaialble.js';
 
 /**
  * @TODO big big todo - split all code between a mobile and tablet+desktop separate websites
@@ -26,13 +27,13 @@ const App = (props) => {
             </main>
             {/* <footer> */}
             {/* FOOTERS */}
-                <Container className='container-no-p-sm'>
-                    <Row className='no-gutters-sm ' >
-                        <Col>
-                            <p>Footer under development</p>
-                        </Col>
-                    </Row>
-                </Container>
+            <Container className='container-no-p-sm'>
+                <Row className='no-gutters-sm ' >
+                    <Col>
+                        <p>Footer under development</p>
+                    </Col>
+                </Row>
+            </Container>
             {/* </footer> */}
         </React.Fragment >
     );
