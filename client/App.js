@@ -51,7 +51,9 @@ export default {
                 dispatch(fetchViewParams()),
                 dispatch(fetchRoutes())
             ]
-        )
+        ).catch((e) => {
+            console.log(e);
+        })
     //    {
     //               paths: () => dispatch(fetchPaths()),
     //    viewParams: () => dispatch(fetchViewParams())

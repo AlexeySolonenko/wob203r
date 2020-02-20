@@ -4,8 +4,6 @@ const baseConfig = require('./webpack.dev.client.base.js');
 const merge = require('webpack-merge');
 //const webpackNodeExternals = require('webpack-node-externals');
 
-const deploymentTools = require('./devops/deployment/ftp.deploy.dev.js');
-console.log(deploymentTools);
 
 const config = {
     target: 'node',

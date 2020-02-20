@@ -88,7 +88,9 @@ console.log('index.api.mjs 2');
 
         let allowedOrigins = [
             'http://localhost:3000',
+            'https://localhost:3000',
             'http://localhost:3001',
+            'https://localhost:3001',
             'http://127.0.0.1:3000',
             'http://127.0.0.1:3001',
             'http://debug.tab4lioz.beget.tech/',
@@ -153,8 +155,8 @@ console.log('index.api.mjs 2');
         /* TODO to apply local certificates only for local host - on remote host apache is a proxy, node should talk to apache in http ?  */
         let httpsKey, httpsCert;
         try{
-        httpsKey = await pReadFile(path.resolve('./tls_self_keys/key.key'));
-        httpsCert = await pReadFile(path.resolve('./tls_self_keys/cert.crt'));
+            httpsKey = await pReadFile(path.resolve('./tls_self_keys/key.key'));
+            httpsCert = await pReadFile(path.resolve('./tls_self_keys/cert.crt'));
         } catch(e){
             console.log(e);
         }
