@@ -21,8 +21,9 @@ global.APP_CONFIG = config.get('appConfig');
 /* Asynced functinons */
 const pReadFile = util.promisify(fs.readFile);
 
-const app = express();
-(async () => {
+
+const generateSsrApp = async () => {
+    const app = express();
     /* serve static files, like client bundle, some assets, from public folder */
     app.use(express.static('public'));
 
@@ -32,6 +33,9 @@ const app = express();
     //app.get('*', (req, res) => {
     app.get(/^[^.]+$|\.(?!(js|css|png|jpeg|ico)$)([^.]+$)/, async (req, res) => {
         const store = await createStore(req);
+        console.log('req');
+        console.log(req.secure);
+        console.log(req.protocol);
 
         const promises = matchRoutes(Routes, req.path).map(({ route }) => {
             return route.loadData ? route.loadData(store) : null;
@@ -43,12 +47,15 @@ const app = express();
                 });
             }
         });
+        
         console.log(store.getState());
         Promise.all(promises).then(() => {
             const context = {};
             /* Redirects */
             /* If api is down */
             /* TODO to setup a handshake with API and check on the handshake */
+            console.log('store');
+            console.log(store.getState());
             if (!store.getState().paths && req.path !== '/we_will_be_back_soon') {
                 return res.redirect(HttpStatus.TEMPORARY_REDIRECT, '/we_will_be_back_soon');
             }
@@ -67,30 +74,56 @@ const app = express();
             }
 
             res.send(content);
+        }).catch(e =>{
+            console.log('Error launching http app' + util.inspect(e))
+            logger.info('Error launching http app' + util.inspect(e));
         });
     });
-    const port = process.env.port || 3000;
 
-    let httpsKey, httpsCert;
+    return app;
+};
 
-    try{
-        httpsKey = await pReadFile(path.resolve('./tls_self_keys/key.key'));
-        httpsCert = await pReadFile(path.resolve('./tls_self_keys/cert.crt'));
-    } catch(e){
-        console.log(e);
+(async () => {
+    /* Make and run an Http server */
+    try {
+        const httpApp = await generateSsrApp();
+        const port = process.env.port || 3000;
+        httpApp.listen(port, () => {
+            console.log('HTTP app listening on port : ', port);
+        });
+    } catch (e) {
+        console.log('Error launching http app' + util.inspect(e))
+        logger.info('Error launching http app' + util.inspect(e));
     }
-    console.log(3);
-    let httpsServerOpts = {
-        key:httpsKey,
-        cert:httpsCert,
-    };
-    let httpsServer = https.createServer(httpsServerOpts,app);
-    console.log('before listen 3');
-    httpsServer.listen(port, 'localhost', 511, () => console.log('Express  listening on ' + port));
 
 
-    console.log('SSR preparing to serve  ');
-    // app.listen(port, () => {
-    //     console.log('Listening on port   : ', port);
-    // });
+    /* Make and run an Https server */
+
+    console.log(process.env);
+    let ca, httpsKey, httpsCert;
+    try {
+        const httpsApp = await generateSsrApp();
+        httpsKey = await pReadFile(path.resolve('../wob203r_secrets/certs/end_cert_key.pem'));
+        httpsCert = await pReadFile(path.resolve('../wob203r_secrets/certs/end_cert_cert.pem'));
+        //ca = await pReadFile(path.resolve('./secrets/cacert.crt'));
+        const port = 3002;
+        let httpsServerOpts = {
+            //ca: ca,
+            key: httpsKey,
+            passphrase: 'Limpopo2*',
+            cert: httpsCert,
+        };
+        let httpsServer = https.createServer(httpsServerOpts, httpsApp);
+
+        httpsServer.listen(port);
+        httpsServer.on('listening', () => {
+            console.log('Https app listening on port  ' + port);
+            logger.info('Https app listening on port ' + port);
+        });
+
+    } catch (e) {
+        console.log('Error starting SSR server' + util.inspect(e));
+        logger.info('Error starting SSR server' + util.inspect(e));
+    }
+
 })();

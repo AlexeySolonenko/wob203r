@@ -44,12 +44,12 @@ const App = (props) => {
  */
 export default {
     component: App,
-    loadData: ({ dispatch }) =>
+    loadData: ({ dispatch },req) =>
         Promise.all(
             [
-                dispatch(fetchPaths()),
-                dispatch(fetchViewParams()),
-                dispatch(fetchRoutes())
+                dispatch(fetchPaths(req)),
+                dispatch(fetchViewParams(req)),
+                dispatch(fetchRoutes(req))
             ]
         ).catch((e) => {
             console.log(e);

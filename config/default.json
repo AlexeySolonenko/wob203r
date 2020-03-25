@@ -1,7 +1,12 @@
 {
     "appConfig": {
-        "appUrl": "https://localhost:3000",
-        "apiUrl": "https://localhost:3001/",
+        "apiHost":"//localhost",
+        "apiHttpPort":"3001",
+        "apiHttpsPort":"3003",
+        "appUrl": "//localhost:3000",
+        "appHost":"//localhost",
+        "appHttpPort":"3000",
+        "appHttpsPort":"3002",
         "env": "test_local",
         "mode": "development"
     }

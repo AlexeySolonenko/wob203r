@@ -3,8 +3,21 @@ FIXME
 - card columns?
 
 
+CERTIFICATES!!!
+https://stackoverflow.com/questions/21297139/how-do-you-sign-a-certificate-signing-request-with-your-certification-authority/21340898#21340898
+
+
 TODO
+- try to reissue local cert for more than one month
+- make new certs for remotes, and upload, should work, somehow
+- TO MAKE THE PATH OUT OF THE PUBLIC_HTML
+- try to focus more on the website tomorrow, to get it at least running
+- to work out all catches and error boundaries
+
+
 - switch to https
+- to find out where exactly is ca required?
+- move https password into json
 - make login and logout funct-lity
 - start making a generic config file to be located and duplicated both, on remote and on local
 - test import of deploy functions instead of running a file

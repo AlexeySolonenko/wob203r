@@ -1,0 +1,19 @@
+[req]
+distinguished_name = api_test_loc_tab4lioz_beget_tech
+x509_extensions = v3_req
+prompt = no
+[api_test_loc_tab4lioz_beget_tech]
+C = MT
+ST = MSIDA
+L = MSIDA
+O = PRIVATE
+OU = API
+CN = localhost
+[v3_req]
+keyUsage = critical, digitalSignature, keyAgreement
+extendedKeyUsage = serverAuth
+subjectAltName = DNS:localhost, DNS:*.localhost.*,DNS:127.0.0.1
+[alt_names]
+DNS.1 = www.localhost.com
+DNS.2 = localhost.com
+DNS.3 = localhost

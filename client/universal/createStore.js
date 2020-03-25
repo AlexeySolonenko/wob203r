@@ -9,27 +9,31 @@ import util from 'util';
 
 const pReadFile = util.promisify(fs.readFile);
 
+
 export default async (req) => {
 
-    let clientKey, clientCert;
+    let httpsServerOpts;
 
-    try{
-        clientKey = await pReadFile(path.resolve('./tls_self_keys/key.key'));
-        clientCert = await pReadFile(path.resolve('./tls_self_keys/cert.pem'));
-    } catch(e){
-        console.log(e);
+    try {
+        httpsServerOpts = {
+            key : await pReadFile(path.resolve('../wob203r_secrets/certs/end_cert_key.pem')),
+            cert : await pReadFile(path.resolve('../wob203r_secrets/certs/end_cert_cert.pem')),
+            ca : await pReadFile(path.resolve('../wob203r_secrets/certs/cacert.crt')),
+            passphrase: 'Limpopo2*',
+            defaultPort:3002,
+        }
+    } catch (e) {
+        console.log(e,'1');
     }
 
-    let httpsServerOpts = {
-        // key:clientKey,
-        // cert:clientCert,
-        //ca:clientCert.toString(),
-        ca:clientCert,
-    };
     let httpsAgent = new https.Agent(httpsServerOpts);
 
+    let baseURL = req.protocol + ":" + APP_CONFIG.apiHost + ":";
+    if (APP_CONFIG.env === 'test_local') {
+        baseURL += ((req.protocol === 'https') ? APP_CONFIG.apiHttpsPort : APP_CONFIG.apiHttpPort);
+    }
     const axiosInstance = axios.create({
-        baseURL: APP_CONFIG.apiUrl,
+        baseURL,
         httpsAgent,
     });
     const store = createStore(reducers, {}, applyMiddleware(thunk.withExtraArgument(axiosInstance)));
