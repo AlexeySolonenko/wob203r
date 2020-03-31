@@ -72,6 +72,7 @@ const createHttpsApp = async () => {
         ];
 
         app.use((req, res, next) => {
+             logger.info('test');
             let requestPath = req.protocol + '://' + req.hostname;
             console.log(requestPath);
             logger.info(requestPath);
